@@ -5,7 +5,7 @@ description: Load ghklabs project context before Elephant-Goldfish brainstorming
 
 # ghklabs Elephant
 
-ghklabs is a greenfield repository. There is no application code yet. Treat `docs/designs/` as the source of truth for intended behavior.
+ghklabs is a greenfield repository. Treat `docs/designs/` as the source of truth for intended behavior. The `webhook` package and `cmd/ghklabs` implement the accepted webhook API design.
 
 ## Context
 
