@@ -29,7 +29,7 @@ func (h Handler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 		h.publish(w, r)
-	case r.URL.Path == "/v1/drain" && (r.Method == http.MethodPost || r.Method == http.MethodGet):
+	case (r.URL.Path == "/v1/drain" || r.URL.Path == "/api" || r.URL.Path == "/api/drain") && (r.Method == http.MethodPost || r.Method == http.MethodGet):
 		if !h.allow(w, r, true) {
 			return
 		}

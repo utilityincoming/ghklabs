@@ -66,7 +66,7 @@ func TestPublishAndDrain(t *testing.T) {
 func TestHTTPAuthAndCronToken(t *testing.T) {
 	svc := testService(t, http.DefaultClient)
 	h := Handler{Service: svc, Tokens: []string{"api", "cron"}}
-	req := httptest.NewRequest(http.MethodPost, "/v1/drain", nil)
+	req := httptest.NewRequest(http.MethodGet, "/api", nil)
 	req.Header.Set("Authorization", "Bearer cron")
 	rec := httptest.NewRecorder()
 	h.ServeHTTP(rec, req)

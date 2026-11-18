@@ -14,7 +14,7 @@ curl -s -H "Authorization: Bearer dev" -H "Content-Type: application/json" \
   http://localhost:8080/v1/events
 ```
 
-`/v1` routes require that bearer token. `GET /v1/drain` also accepts `CRON_SECRET`. On Vercel, set `DATABASE_URL` (Postgres) and both secrets. `vercel.json` sends Cron to `/v1/drain` every minute. A SQLite file does not persist across Vercel invocations.
+`/v1` routes require that bearer token. Drain also accepts `CRON_SECRET`. On Vercel, set `DATABASE_URL` (Postgres) and both secrets. `vercel.json` sends Cron to `GET /api` once a day, which is the drain entry on a Hobby plan. A SQLite file does not persist across Vercel invocations.
 
 `webhook.Dispatcher` is the in-memory library underneath the same signing and retry rules. Signature header: `X-GHK-Signature: t=<unix>,v1=<hex>`, HMAC-SHA256 of `<unix>.<body>`.
 
