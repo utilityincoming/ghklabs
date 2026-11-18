@@ -1,10 +1,22 @@
 # ghklabs
 
-Webhook delivery for outbound event notifications.
+Outbound webhook delivery for ghklabs.
 
-`webhook.Dispatcher` registers subscriber endpoints, publishes events, and POSTs a JSON body with an HMAC-SHA256 signature. Failed attempts stay pending and become due again after backoff. A delivery is marked failed after the attempt limit.
+The long-running server is `cmd/ghklabs`. It stores endpoints and deliveries in SQLite (`GHK_DB`, default `data/ghk.db`) or Postgres (`DATABASE_URL`), and drains due work every second.
 
-Signature header: `X-GHK-Signature: t=<unix>,v1=<hex>`, where `v1` is HMAC-SHA256 of `<unix>.<body>` using the endpoint secret. Receivers check it with `webhook.Verify`.
+```sh
+GHK_API_TOKEN=dev go run ./cmd/ghklabs
+curl -s -H "Authorization: Bearer dev" -H "Content-Type: application/json" \
+  -d '{"id":"lab","url":"https://example.com/hooks","secret":"sek","types":["lot.released"]}' \
+  http://localhost:8080/v1/endpoints
+curl -s -H "Authorization: Bearer dev" -H "Content-Type: application/json" \
+  -d '{"id":"evt_1","type":"lot.released","data":{"lot":"A"}}' \
+  http://localhost:8080/v1/events
+```
+
+`/v1` routes require that bearer token. Drain also accepts `CRON_SECRET`. On Vercel, set `DATABASE_URL` (Postgres) and both secrets. `vercel.json` sends Cron to `GET /api` once a day, which is the drain entry on a Hobby plan. A SQLite file does not persist across Vercel invocations.
+
+`webhook.Dispatcher` is the in-memory library underneath the same signing and retry rules. Signature header: `X-GHK-Signature: t=<unix>,v1=<hex>`, HMAC-SHA256 of `<unix>.<body>`.
 
 ```go
 d := webhook.NewDispatcher(webhook.Options{})
@@ -15,6 +27,9 @@ _ = d.Register(webhook.Endpoint{
 ids, _ := d.Publish(webhook.Event{ID: "evt_1", Type: "invoice.paid", Data: json.RawMessage(`{"id":"in_1"}`)})
 _ = d.DeliverOnce(ctx, ids[0])
 ```
+
+The accepted API design is `docs/designs/webhook-api.md`.
+
 Greenfield project set up for [Elephant-Goldfish Model](https://github.com/google/elephant-goldfish-model) (EGM) design-driven development.
 
 Design documents live in `docs/designs/`. Project context for an Elephant session lives in `_agents/skills/ghklabs_elephant/SKILL.md`.

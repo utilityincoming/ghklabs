@@ -263,7 +263,7 @@ func (d *Dispatcher) DeliverOnce(ctx context.Context, id string) error {
 	attemptN := len(dlv.Attempts) + 1
 	d.mu.Unlock()
 
-	status, postErr := d.post(ctx, ep, event, body)
+	status, postErr := postEvent(ctx, d.client, d.clock, ep, event, body)
 
 	d.mu.Lock()
 	defer d.mu.Unlock()
@@ -285,7 +285,7 @@ func (d *Dispatcher) DeliverOnce(ctx context.Context, id string) error {
 	return postErr
 }
 
-func (d *Dispatcher) post(ctx context.Context, ep Endpoint, ev Event, body []byte) (int, error) {
+func postEvent(ctx context.Context, client *http.Client, clock Clock, ep Endpoint, ev Event, body []byte) (int, error) {
 	req, err := http.NewRequestWithContext(ctx, http.MethodPost, ep.URL, bytes.NewReader(body))
 	if err != nil {
 		return 0, err
@@ -293,9 +293,9 @@ func (d *Dispatcher) post(ctx context.Context, ep Endpoint, ev Event, body []byt
 	req.Header.Set("Content-Type", "application/json")
 	req.Header.Set(HeaderEventID, ev.ID)
 	req.Header.Set(HeaderEventType, ev.Type)
-	req.Header.Set(HeaderSignature, Sign(ep.Secret, d.clock.Now(), body))
+	req.Header.Set(HeaderSignature, Sign(ep.Secret, clock.Now(), body))
 
-	resp, err := d.client.Do(req)
+	resp, err := client.Do(req)
 	if err != nil {
 		return 0, err
 	}

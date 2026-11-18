@@ -4,4 +4,4 @@ Index of Elephant-Goldfish design artifacts for ghklabs. Add a row when a design
 
 | Document | Status | Summary |
 | --- | --- | --- |
-| — | — | No designs yet. Start with `/egm-brainstorm`. |
+| [webhook-api.md](webhook-api.md) | accepted | HTTP API to register endpoints, publish events, and drain a SQL-backed delivery queue. |
