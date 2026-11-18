@@ -17,7 +17,7 @@ type Handler struct {
 
 func (h Handler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	switch {
-	case r.URL.Path == "/healthz" && r.Method == http.MethodGet:
+	case (r.URL.Path == "/" || r.URL.Path == "/healthz") && r.Method == http.MethodGet:
 		writeJSON(w, http.StatusOK, map[string]string{"status": "ok"})
 	case r.URL.Path == "/v1/endpoints" && r.Method == http.MethodPost:
 		if !h.allow(w, r, false) {
@@ -97,7 +97,16 @@ func (h Handler) publish(w http.ResponseWriter, r *http.Request) {
 	if ids == nil {
 		ids = []string{}
 	}
-	writeJSON(w, http.StatusAccepted, map[string]any{"delivery_ids": ids})
+	// First attempt happens in this request. Later retries wait for drain.
+	result, err := h.Service.DeliverIDs(r.Context(), ids)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	writeJSON(w, http.StatusAccepted, map[string]any{
+		"delivery_ids": ids,
+		"drain":        result,
+	})
 }
 
 func (h Handler) drain(w http.ResponseWriter, r *http.Request) {

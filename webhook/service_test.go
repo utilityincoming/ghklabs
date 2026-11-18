@@ -3,6 +3,7 @@ package webhook
 import (
 	"context"
 	"encoding/json"
+	"fmt"
 	"io"
 	"net/http"
 	"net/http/httptest"
@@ -60,6 +61,30 @@ func TestPublishAndDrain(t *testing.T) {
 	again, err := svc.Drain(ctx, 10)
 	if err != nil || again.Attempted != 0 {
 		t.Fatalf("second drain: %+v %v", again, err)
+	}
+}
+
+func TestHTTPPublishDeliversImmediately(t *testing.T) {
+	srv := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		w.WriteHeader(http.StatusNoContent)
+	}))
+	defer srv.Close()
+	svc := testService(t, srv.Client())
+	h := Handler{Service: svc, Tokens: []string{"api"}}
+	body := fmt.Sprintf(`{"id":"lab","url":%q,"secret":"sek","types":["lot.released"]}`, srv.URL)
+	req := httptest.NewRequest(http.MethodPost, "/v1/endpoints", strings.NewReader(body))
+	req.Header.Set("Authorization", "Bearer api")
+	rec := httptest.NewRecorder()
+	h.ServeHTTP(rec, req)
+	if rec.Code != http.StatusOK {
+		t.Fatalf("register: %d %s", rec.Code, rec.Body.String())
+	}
+	req = httptest.NewRequest(http.MethodPost, "/v1/events", strings.NewReader(`{"id":"evt_1","type":"lot.released","data":{"lot":"A"}}`))
+	req.Header.Set("Authorization", "Bearer api")
+	rec = httptest.NewRecorder()
+	h.ServeHTTP(rec, req)
+	if rec.Code != http.StatusAccepted || !strings.Contains(rec.Body.String(), `"delivered":1`) {
+		t.Fatalf("publish: %d %s", rec.Code, rec.Body.String())
 	}
 }
 

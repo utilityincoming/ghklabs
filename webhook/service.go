@@ -116,6 +116,35 @@ type DrainResult struct {
 	Pending   int `json:"pending"`
 }
 
+// DeliverIDs attempts the given deliveries when they are due. This is the first try after publish.
+func (s *Service) DeliverIDs(ctx context.Context, ids []string) (DrainResult, error) {
+	now := s.clock.Now()
+	var result DrainResult
+	for _, id := range ids {
+		ok, err := s.store.Claim(ctx, id, now, now.Add(claimLease))
+		if err != nil {
+			return result, err
+		}
+		if !ok {
+			continue
+		}
+		status, err := s.deliverClaimed(ctx, id)
+		if err != nil && status == "" {
+			return result, err
+		}
+		result.Attempted++
+		switch status {
+		case StatusDelivered:
+			result.Delivered++
+		case StatusFailed:
+			result.Failed++
+		default:
+			result.Pending++
+		}
+	}
+	return result, nil
+}
+
 // Drain attempts up to limit due deliveries. Limit defaults to 50.
 func (s *Service) Drain(ctx context.Context, limit int) (DrainResult, error) {
 	if limit < 1 {
