@@ -1,0 +1,10 @@
+---
+description: Elephant-Goldfish workflow for ghklabs
+alwaysApply: true
+---
+
+ghklabs uses the Elephant-Goldfish Model. Before design or implementation work, read `_agents/skills/ghklabs_elephant/SKILL.md`.
+
+Design documents belong in `docs/designs/`. Keep `docs/designs/SITEMAP.md` current when a design is added or its status changes.
+
+Use the installed EGM plugin skills (`egm-brainstorm`, `egm-draft`, `egm-review`) when they are available. Do not simulate a Goldfish review inside the parent session.
