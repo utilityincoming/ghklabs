@@ -11,34 +11,39 @@ import (
 )
 
 var (
-	once    sync.Once
+	mu      sync.Mutex
 	handler http.Handler
-	initErr error
 )
 
 func Handler(w http.ResponseWriter, r *http.Request) {
-	once.Do(func() {
-		dsn := os.Getenv("DATABASE_URL")
-		if dsn == "" {
-			dsn = os.Getenv("GHK_DB")
-		}
-		if dsn == "" {
-			initErr = errNoDatabase
-			return
-		}
-		store, err := webhook.OpenSQL(context.Background(), dsn)
-		if err != nil {
-			initErr = err
-			return
-		}
-		svc := webhook.NewService(store, webhook.Options{})
-		handler = webhook.Handler{Service: svc, Tokens: []string{os.Getenv("GHK_API_TOKEN"), os.Getenv("CRON_SECRET")}}
-	})
-	if initErr != nil {
-		http.Error(w, initErr.Error(), http.StatusServiceUnavailable)
+	h, err := currentHandler()
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusServiceUnavailable)
 		return
 	}
-	handler.ServeHTTP(w, r)
+	h.ServeHTTP(w, r)
+}
+
+func currentHandler() (http.Handler, error) {
+	mu.Lock()
+	defer mu.Unlock()
+	if handler != nil {
+		return handler, nil
+	}
+	dsn := os.Getenv("DATABASE_URL")
+	if dsn == "" {
+		dsn = os.Getenv("GHK_DB")
+	}
+	if dsn == "" {
+		return nil, errNoDatabase
+	}
+	store, err := webhook.OpenSQL(context.Background(), dsn)
+	if err != nil {
+		return nil, err
+	}
+	svc := webhook.NewService(store, webhook.Options{})
+	handler = webhook.Handler{Service: svc, Tokens: []string{os.Getenv("GHK_API_TOKEN"), os.Getenv("CRON_SECRET")}}
+	return handler, nil
 }
 
 var errNoDatabase = errString("DATABASE_URL or GHK_DB is required")
