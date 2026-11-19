@@ -1,6 +1,6 @@
 # Pricing and product drafts
 
-Status: draft
+Status: accepted
 
 Suggested catalog and pricing for the copper-peptide storefront
 ([storefront.md](storefront.md)), under the reseller/dropship model
@@ -238,6 +238,12 @@ framework pending confirmed landed COGS (§7 Q2).
 
 ## 8. Acceptance
 
-Accept after Q1 (wholesale/MAP) and Q2 (raw COGS) land, alongside a signed claim
-sheet for the P1 copy. Suggested prices become committed only with the
-principals' sign-off; nothing here quotes the partner's terms.
+**Accepted** by principal direction: the catalog shape (one serum, two powder
+pack-weights), the positioning, the two-cost-model margin method, and the
+raw-material landscape are the agreed basis for the storefront.
+
+Acceptance of the *structure* does not commit the *numbers*. Open questions Q1
+(wholesale/MAP) and Q2 (raw COGS) are still open, so the suggested prices remain
+suggestions until those land and the principals sign them off, and the P1 serum
+copy still needs a signed claim sheet before publish. Nothing here quotes the
+partner's terms.
