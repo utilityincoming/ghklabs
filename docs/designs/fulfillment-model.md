@@ -2,7 +2,11 @@
 
 Status: draft
 
-This document records how ghklabs sources and ships the goods it sells, and what that reality forces to be true in copy, data, and compliance. It is the groundwork layer under [storefront.md](storefront.md); where the two disagree, the difference is called out here and `storefront.md` is updated when this is accepted. It is not legal advice. Counsel and a payments underwriter review the reseller posture before launch.
+This document records how ghklabs sources and ships the goods it sells, and what that reality forces to be true in copy, data, and compliance. It is the groundwork layer under [storefront.md](storefront.md); where the two disagree, the difference is called out here and `storefront.md` follows it. It is not legal advice. Counsel and a payments underwriter review the reseller posture before launch.
+
+## Decided
+
+**Posture: reseller / merchant of record.** ghklabs buys at wholesale and sells at retail as the seller of record; it is not an affiliate earning commission on another party's checkout. This resolves open question 1 and sets the defaults everywhere below: ghklabs takes payment, the affiliate/endorsement disclosure slot stays unrendered, and the copy speaks as the seller. The storefront deltas in this document are folded into `storefront.md`.
 
 ## Confidentiality
 
@@ -80,7 +84,7 @@ None of the above names the partner. All of it is compatible with a private agre
 
 ## Open questions
 
-1. **Posture.** Reseller/merchant-of-record (default, per this doc) or affiliate earning commission on the partner's checkout? Changes disclosure and who takes payment. Default: reseller.
+1. ~~**Posture.** Reseller/merchant-of-record or affiliate?~~ **Decided: reseller / merchant of record.** See Decided, above.
 2. **Hand-off.** Partner feed/API for inventory and order routing, or manual in the MVP? Default: manual MVP, feed in phase 2.
 3. **COA hosting.** Re-host the supplier's COA PDFs in our Shopify Files (stable URL, our integrity hash) or deep-link to the partner (reveals origin)? Default: re-host, attributed to the manufacturer.
 4. **Lot visibility.** Does the feed tell us the exact lot that will ship per order, or only the current released lot? Default: show current released lot as representative until the feed guarantees per-order lots.
@@ -91,4 +95,4 @@ None of the above names the partner. All of it is compatible with a private agre
 
 ## Acceptance
 
-Accept after questions 1–3 and 8 are answered or defaults explicitly kept. On acceptance, fold the COA-provenance, inventory, and fulfillment deltas into `storefront.md` and update the data model there.
+Question 1 (posture) is decided: reseller. Accept after questions 2–3 and 8 are answered or defaults explicitly kept. The COA-provenance, inventory, and fulfillment deltas are folded into `storefront.md`.

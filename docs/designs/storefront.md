@@ -4,6 +4,8 @@ Status: draft
 
 This is the product specification for the public ghklabs shop. It is not an accepted design and it is not legal advice. A cosmetics regulatory counsel and a payments underwriter should review the claims, labeling, and raw-material offer before launch.
 
+**Sourcing model.** ghklabs is a **reseller and merchant of record**: it buys a finished cosmetic at wholesale from a supply partner and dropships it, selling under its own brand. It does not manufacture or test the goods. [fulfillment-model.md](fulfillment-model.md) governs sourcing, COA provenance, inventory, and fulfillment; this document follows it. The supply partner is not named on any consumer surface or in this repo.
+
 The accepted webhook API (`webhook-api.md`) stays the outbound event pipe. This document does not change it. A later design can subscribe the storefront to `lot.released` once lots and COAs are operational.
 
 ## Positioning
@@ -11,6 +13,7 @@ The accepted webhook API (`webhook-api.md`) stays the outbound event pipe. This 
 Default, until the open questions are answered:
 
 - The brand is a premium, science-forward **cosmetic** house. The visual language is modern skincare: calm, precise, ingredient-literate. It is not a research-chemical catalog.
+- The house is a **reseller**, not a manufacturer. It owns the brand, the copy, the claims, the sale, and support; the supply partner owns formula, testing, and shipping. Trust is built on the manufacturer's certificate and honest fulfillment, not on an implied in-house lab.
 - Finished goods are the primary offer and the homepage story. Raw GHK-Cu powder is a separate catalog for formulators, with its own navigation, PDP template, checkout acknowledgment, and claim rules.
 - Education explains what the ingredient is, how cosmetic products are made and tested, and how to use a finished serum on skin. It does not teach injection, ingestion, dosing for treatment, or disease outcomes.
 
@@ -86,7 +89,7 @@ Primary navigation: Shop, Science, Quality, Journal, Account. Raw materials are 
 
 ### Journeys
 
-**Cosmetic buyer.** Home or serum collection → serum PDP (INCI, texture, how to apply, lot COA, cosmetic disclaimer) → cart → Shopify checkout → order in the account. No disease claims on any step, including cart cross-sells.
+**Cosmetic buyer.** Home or serum collection → serum PDP (INCI, texture, how to apply, the manufacturer's lot COA, cosmetic disclaimer, a ships-from-partner line) → cart → Shopify checkout → order in the account, fulfilled by the supply partner. No disease claims on any step, including cart cross-sells.
 
 **Formulator.** Raw collection → powder PDP (identity, purity, net weight, COA, storage, “not a finished cosmetic”) → required acknowledgment checkbox in the cart before checkout is enabled → Shopify checkout. The acknowledgment is stored as a cart attribute so it appears on the order.
 
@@ -121,7 +124,7 @@ Shopify is the system of record for money and stock. The storefront reads a narr
 | `id`, `sku`, `title` | One sellable unit. |
 | `optionValues` | Size or pack. Potency is not an option on cosmetics (one formula per product). Powder may vary by pack weight only. |
 | `price` | Money. |
-| `availableForSale` | False when inventory is zero. No backorder in the MVP. |
+| `availableForSale` | ghklabs holds no stock; this tracks the supply partner's availability (manual cadence in the MVP, partner feed in phase 2), not a warehouse we run. False when the partner is out. No backorder in the MVP. |
 | `inventoryPolicy` | Deny. |
 | `weight` | For shipping profiles. |
 
@@ -147,11 +150,12 @@ A cosmetic and a raw material never share a product. They can share an ingredien
 | `purity` | Raw materials. Method named beside the number (e.g. HPLC). |
 | `identityMethod` | e.g. HPLC, MS. |
 | `appearance`, `peptideContent` | As reported. Absent fields are omitted, not invented. |
-| `documentUrl` | PDF in Shopify Files. |
-| `documentSha256` | So a replaced file is detectable. |
+| `documentUrl` | The manufacturer's COA for the batch. Re-hosted in Shopify Files (stable URL, our integrity hash) and labeled as the manufacturer's certificate, not an in-house test. |
+| `documentSha256` | So a replaced file is detectable. Integrity, not authorship. |
+| `source` | Origin of the identity/purity figures. `supplier` for all lots under the reseller model. The site never presents these as its own test results. |
 | `status` | `released` or `recalled`. Recalled lots stay visible with a recall banner and are not attached to sellable variants. |
 
-The sellable variant points at the current released lot. Older released COAs stay on `/quality/coas`. The webhook `lot.released` event is the future trigger to publish a lot; the MVP can publish lots in Shopify admin.
+The COA is the supply partner's certificate for their batch; ghklabs surfaces it and does not author it. The sellable variant points at the current released lot. Because fulfillment is dropship, the exact lot that ships per order is set by the partner at ship time and may not be known pre-purchase: show the current released lot as representative, labeled as such, unless the partner feed guarantees a per-order lot. Older released COAs stay on `/quality/coas`. The webhook `lot.released` event is the future trigger to ingest a lot the partner publishes; the MVP can enter lots in Shopify admin.
 
 ### Content
 
@@ -177,6 +181,16 @@ Orders, refunds, taxes, and tenders are Shopify orders. The MVP does not copy th
 
 Customer accounts use Shopify customer accounts. The app does not store passwords.
 
+## Fulfillment
+
+Dropship. ghklabs is the seller; the supply partner picks, packs, and ships.
+
+- **Order routing.** On a paid Shopify order, the order is handed to the partner for fulfillment — manually in the MVP, by feed/API in phase 2. An order carries a `fulfillment_partner_order_ref` once an integration exists, so a shipment maps back to our order. Out of MVP if hand-off is manual.
+- **Shipping copy.** Lead time, carrier, and origin are the partner's. The storefront and `/legal/shipping` state that orders are fulfilled and shipped by a third party, with the lead time that implies. The partner is not named; that it ships from a third party is not hidden where it affects delivery, returns, or the parcel's origin.
+- **Blind shipping.** Whether the partner ships unbranded (so the parcel does not disclose them) is confirmed with the partner, not assumed. Until confirmed, copy says "ships from our fulfillment partner" without a name.
+- **Returns.** Returns route through ghklabs support to a return address the partner supplies. `/legal/returns` reflects the partner's RMA window, not an invented one.
+- **Adverse events.** The MoCRA contact path is ghklabs as seller, routed to the responsible person named on the label (see Compliance).
+
 ## Core pages
 
 | Page | Goal | Required content |
@@ -200,7 +214,9 @@ This section is a product constraint list for counsel to confirm. It is not a de
 
 **Finished serums are cosmetics.** Labels and pages may talk about cleansing, beautifying, or altering appearance: moisturize, soften the look of skin, improve the look of skin texture. They may not claim to treat, prevent, or affect disease, and they may not make structure/function claims (collagen production, wound healing, hair regrowth, “repairs DNA”, hormone effects, pain, inflammation as a condition). “Stimulates collagen” and “heals skin” are treated as out of class for this catalog. Citations to wound-healing or anti-aging **studies** stay in the science section, labeled as literature, and are not repeated as what the serum does.
 
-**MoCRA (US cosmetics).** Finished products need a responsible person, facility registration, product listing, adverse-event recording, and labeling that counsel signs off (identity, net quantity, ingredients, warnings, responsible person). The contact page is the public adverse-event door. The website does not replace the package label.
+**MoCRA (US cosmetics).** Finished products need a responsible person, facility registration, product listing, adverse-event recording, and labeling that counsel signs off (identity, net quantity, ingredients, warnings, responsible person). The contact page is the public adverse-event door. The website does not replace the package label. Under the reseller model, confirm with counsel whether ghklabs, the manufacturer, or both carry responsible-person duties for the finished cosmetic, and whose name and address appear on the label and the adverse-event contact. This is blocking for launch labeling; it is an open question here.
+
+**Claims are the seller's.** As merchant of record, ghklabs is responsible for every appearance claim on the site and in ads, regardless of who manufactured the serum. Reselling does not transfer claim liability to the supply partner. The claim class, the banned contexts, and counsel sign-off apply to our copy even when the partner supplies the substantiation.
 
 **Raw powder.** Default offer: sold as a cosmetic ingredient to formulators, not as a food, drug, or research chemical for human administration. Pages do not give oral doses, injection volumes, reconstitution for injection, or “not for human consumption” winks that still explain human use. If counsel later requires a research-use-only posture, that is a different product type with its own payment review; it is not the MVP default, because that posture fights the premium-skincare brand and is the phrase processors flag.
 
@@ -244,6 +260,8 @@ Out of MVP: custom subscriptions, a formulation calculator, a wholesale portal U
 
 Decisions below change the spec. Defaults in this draft are what implementation will follow if they are not changed before the design is accepted.
 
+Sourcing posture is **decided: reseller / merchant of record** ([fulfillment-model.md](fulfillment-model.md)). The fulfillment hand-off (manual vs. feed/API), COA hosting (re-host vs. deep-link), per-order lot visibility, and the MoCRA responsible person are tracked as open questions in that document and gate launch, not this draft.
+
 1. **Buyer.** Is the first revenue cosmetic consumers, formulators, or both? Default: consumers first, formulators as a secondary catalog in the same store.
 2. **Powder posture.** Cosmetic ingredient for formulators, or research-use-only? Default: cosmetic ingredient, no research-only branding. Counsel can override.
 3. **Catalog at launch.** One hero serum plus one powder pack, or serums only until payments approve powder? Default: build both templates; enable powder checkout only after the processor accepts that SKU.
@@ -258,4 +276,4 @@ Decisions below change the spec. Defaults in this draft are what implementation 
 
 ## Acceptance
 
-Accept this document only after questions 1–5 are answered or the defaults are explicitly kept. Implementation of the storefront waits on an accepted revision.
+Accept this document only after questions 1–5 are answered or the defaults are explicitly kept, and alongside an accepted [fulfillment-model.md](fulfillment-model.md) (its questions 2–3 and 8). Implementation of the storefront waits on an accepted revision.
