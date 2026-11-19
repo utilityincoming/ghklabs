@@ -1,9 +1,8 @@
 const steps = [
-  { state: "molecule", tone: "", line: "Three amino acids plus copper.", fill: 12, note: "Copper Tripeptide-1 on a cosmetic label. GHK-Cu when identity is the point." },
-  { state: "cells", tone: "", line: "Maquart et al., 1988 — more collagen synthesis.", fill: 40, note: "Measured in cultured fibroblasts. A cell result, not a result on a face." },
-  { state: "people", tone: "", line: "A later human study, small and mixed.", fill: 64, note: "Set after laser resurfacing. Satisfaction moved; several blinded measures did not." },
-  { state: "this serum", tone: "ok", line: "What this bottle claims.", fill: 100, note: "The look of fine lines, the feel of moisturized skin. Nothing more." },
-  { state: "not a drug", tone: "bad", line: "Where the serum stops.", fill: 100, note: "Not a treatment, a wound product, or a dose. Those stay on the paper, labeled as papers." }
+  { state: "molecule", tone: "", line: "Three amino acids plus copper.", fill: 25, note: "GHK-Cu. On the label the name is Copper Tripeptide-1." },
+  { state: "percent", tone: "", line: "The concentration is printed.", fill: 50, note: "{percent} on the label. The figure, in plain type." },
+  { state: "serum", tone: "ok", line: "A few drops, morning and evening.", fill: 75, note: "For the look of fine lines and the feel of moisturized skin." },
+  { state: "lot", tone: "ok", line: "The certificate matches the glass.", fill: 100, note: "Lot {lot}. Identity by {method}. Purity {purity}." }
 ];
 
 const legend = document.getElementById("legend");
