@@ -238,7 +238,7 @@ This section is a product constraint list for counsel to confirm. It is not a de
 - One serum product and one raw-material product, each with one variant and one released COA.
 - Cart with the two disclaimer behaviors, Shopify checkout, test-mode purchase.
 - Five pages of fixed legal copy, one science pillar, two journal posts, quality index.
-- Claim review checklist in the repo (a markdown list a human signs before publish).
+- Claim review checklist in the repo (a markdown list a human signs before publish): [pre-publish-checklist.md](pre-publish-checklist.md).
 - Mobile layout, basic metadata, and a performance budget: LCP-friendly hero, no client-side catalog waterfall.
 
 **Phase 2**
