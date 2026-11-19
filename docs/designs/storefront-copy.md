@@ -18,21 +18,21 @@ The first screen sells the serum. It names the ingredient, the look and feel, an
 
 **Eyebrow** — Copper Tripeptide-1 serum
 
-**Headline** — Softer-looking texture. Skin that feels moisturized.
+**Headline** — Softer-looking skin, with the peptide named and the lot on the glass.
 
-**Deck** — GHK-Cu in a finished serum. The percent is printed. The lot is on the glass. A few drops, morning and evening.
+**Deck** — GHK-Cu in a finished serum. The percent is printed on the label. A few drops, morning and evening.
 
 **Primary button** — Shop the serum.
 
 **Secondary link** — See this lot.
 
-**Proof line** — Lot {lot}. Identity by {method}. Purity {purity}. The manufacturer's certificate is the file for that lot.
+**Proof line** — Lot {lot}. Identity by {method}. Purity {purity}. The manufacturer's certificate for that lot — yours to download.
 
 **Three lines**
 
 1. **Named.** Copper Tripeptide-1 at {percent}, the INCI name for GHK-Cu.
 2. **For the look.** Fine lines and a softer-looking texture.
-3. **For the feel.** Moisturized skin. Then a moisturizer if you want one.
+3. **For the feel.** Skin that feels moisturized.
 
 **Quiet line, below the fold** — A cosmetic for the look and feel of skin. Notes on the published research sit on the science page.
 
@@ -46,7 +46,7 @@ The first screen sells the serum. It names the ingredient, the look and feel, an
 
 {Size}. {Price}. Copper Tripeptide-1 at {percent} in a finished, water-based serum.
 
-- **What it is for** — the look of fine lines and the feel of moisturized skin. Apply to clean, intact skin, morning or night, then a moisturizer if you want one.
+- **What it is for** — the look of fine lines and the feel of moisturized skin. Apply to clean, intact skin, morning or night.
 - **What it is not** — a drug, a wound treatment, or a lesson in how to inject anything.
 - **On this lot** — {lot}, released {date}. {method} identity. {purity}. [Download the manufacturer's COA.]
 - **Shipping** — Sold by GHK Labs, fulfilled and shipped by our fulfillment partner. Lead time {lead_time}. Returns through us.
@@ -105,7 +105,7 @@ If you want the serum, it is here for appearance and feel. If you want the powde
 
 We have not run a finished-product test on this serum. When we do, it gets its own line here, separate from the ingredient research above.
 
-**Close** — Shop the serum for appearance and feel · Read the powder spec
+**Close** — Shop the serum. (Formulating instead? The GHK-Cu powder has its own spec page, sold separately.)
 
 ---
 
