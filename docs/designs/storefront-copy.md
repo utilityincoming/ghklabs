@@ -14,23 +14,27 @@ GHK Labs resells a finished cosmetic and ships it by dropship (see [fulfillment-
 
 ## Home
 
-**Eyebrow** — Copper Tripeptide-1, for skin.
+The first screen sells the serum. It names the ingredient, the look and feel, and the lot. It does not open on what the bottle refuses to be, and the secondary link goes to the lot, not to a paper. Research stays on the science page.
 
-**Headline** — A blue serum with the peptide named, the percent printed, and the lot on the glass.
+**Eyebrow** — Copper Tripeptide-1 serum
 
-**Deck** — GHK-Cu is a small copper complex people have studied for decades. Those studies are not the same thing as a bottle. Ours is a cosmetic for the look and feel of skin: softer-looking texture, a moisturized feel, nothing that pretends to treat a condition.
+**Headline** — Softer-looking texture. Skin that feels moisturized.
+
+**Deck** — GHK-Cu in a finished serum. The percent is printed. The lot is on the glass. A few drops, morning and evening.
 
 **Primary button** — Shop the serum.
 
-**Secondary link** — Read what the papers actually measured.
+**Secondary link** — See this lot.
 
-**Proof line (under the fold)** — Current lot {lot}. Identity by {method}. Purity {purity} on the manufacturer's COA. The same certificate you can download.
+**Proof line** — Lot {lot}. Identity by {method}. Purity {purity}. The manufacturer's certificate is the file for that lot.
 
-**The three-step trust strip** *(one inspectable fact before any adjective)*
+**Three lines**
 
-1. **Named.** Copper Tripeptide-1 — the INCI name for GHK-Cu, three amino acids and copper.
-2. **Printed.** {percent} on the label, in descending-order INCI. The figure, not an adjective.
-3. **Traceable.** Lot {lot}, released {date}. The COA is a link with the code on it.
+1. **Named.** Copper Tripeptide-1 at {percent}, the INCI name for GHK-Cu.
+2. **For the look.** Fine lines and a softer-looking texture.
+3. **For the feel.** Moisturized skin. Then a moisturizer if you want one.
+
+**Quiet line, below the fold** — A cosmetic for the look and feel of skin. Notes on the published research sit on the science page.
 
 ---
 
