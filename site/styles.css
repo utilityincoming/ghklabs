@@ -89,6 +89,14 @@ h2 {
   margin: 0 0 0.8rem;
 }
 .lede { max-width: 42rem; color: var(--muted); font-size: 1.15rem; }
+.signature {
+  margin: 1.6rem 0 0.4rem;
+  font-family: var(--mono);
+  font-size: clamp(0.95rem, 2vw, 1.15rem);
+  letter-spacing: -0.02em;
+}
+.signature span { color: var(--signal); }
+.sig-note { margin: 0; color: var(--muted); }
 .hero { padding: 4.5rem 0 2rem; }
 .hero-actions { display: flex; gap: 1.2rem; align-items: center; margin: 1.6rem 0 2.2rem; }
 .textlink { color: var(--paper); }
@@ -174,7 +182,11 @@ button {
   font-family: var(--sans);
   cursor: pointer;
 }
-button.done { border-color: var(--signal); color: var(--signal); }
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--signal);
+  outline-offset: 3px;
+}
+button.done { background: var(--signal); border-color: var(--signal); color: #14160c; font-weight: 600; }
 
 .split { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 2rem; align-items: center; }
 figure { margin: 0; }

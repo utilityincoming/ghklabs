@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Schibsted+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -26,8 +27,10 @@
   <main id="top">
     <section class="hero">
       <p class="kicker">Outbound delivery</p>
-      <h1>Every event, still moving after the process exits.</h1>
-      <p class="lede">Register a subscriber. Publish once. GHK Labs signs the body, attempts delivery before it responds, and keeps whatever is still pending for the next drain.</p>
+      <h1>Delivery that continues after the process exits.</h1>
+      <p class="lede">Register an endpoint, publish an event, and drain what is still pending. The body is signed before the first attempt.</p>
+      <p class="signature"><span>X-GHK-Signature:</span> t=&lt;unix&gt;,v1=&lt;hex&gt;</p>
+      <p class="sig-note">HMAC-SHA256 of <span class="mono">&lt;unix&gt;.&lt;body&gt;</span> with the endpoint secret.</p>
       <div class="hero-actions">
         <a class="pill solid" href="#calls">See the calls</a>
         <a class="textlink" href="#trace">Watch a delivery</a>
@@ -84,11 +87,11 @@
           <button type="button" data-copy="code-publish">Copy</button>
         </article>
         <article>
-          <header><span>03</span><h3>Drain</h3></header>
-          <p>Due rows are attempted again. Success is delivered. Failure follows the existing backoff. Drain also accepts <span class="mono">CRON_SECRET</span>.</p>
-          <pre><code id="code-drain">curl -s -H "Authorization: Bearer $GHK_API_TOKEN" \
+          <header><span>03</span><h3>Bearer</h3></header>
+          <p>Every <span class="mono">/v1</span> route requires <span class="mono">Authorization: Bearer</span> and <span class="mono">GHK_API_TOKEN</span>. Drain accepts that header or <span class="mono">CRON_SECRET</span>.</p>
+          <pre><code id="code-bearer">curl -s -H "Authorization: Bearer $GHK_API_TOKEN" \
   -X POST http://localhost:8080/v1/drain</code></pre>
-          <button type="button" data-copy="code-drain">Copy</button>
+          <button type="button" data-copy="code-bearer">Copy</button>
         </article>
       </div>
     </section>
