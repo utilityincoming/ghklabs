@@ -46,7 +46,7 @@ powder COGS band.
 
 | Supplier (type) | Grade / claim | 1 g | 100 g | 1 kg | Notes |
 | --- | --- | --- | --- | --- | --- |
-| Carolina Chemical (US) | ≥99.0%, cosmetic/bulk | $24.80 | — | $1,600–2,300 | US-based, published COA; realistic cosmetic-grade basis |
+| Carolina Chemical (US) | ≥99.0%, cosmetic/bulk | $24.80 | $295 ($2.95/g) | $1,600–2,300 | US-based, published COA; realistic cosmetic-grade basis |
 | RS Synthesis (US) | 99%, tiered | $75 (1–5 g) | $25/g | on request | Formulator small-batch; steep volume curve |
 | Bulk Naturals (US) | 99% powder | $19.56 | — | higher tiers | Aimed at skincare formulators |
 | Made-in-China (CN mfr) | 99%, HPLC-MS | $4.34–6.00/g | — | kg ranges unclear | Cosmetic-grade claim; verify COA + CAS |
@@ -130,7 +130,7 @@ Assume raw $2–5/g and ~$4/unit repack+COA+inbound.
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 1 g (launch) | $3.50 | $4.00 | $7.50 | **$34** | $2.29 | $24.21 | 71% |
 | 5 g (launch) | $17.50 | $5.00 | $22.50 | **$119** | $4.75 | $91.75 | 77% |
-| 10 g (later) | $35.00 | $6.00 | $41.00 | $199 | $6.57 | $151.43 | 76% |
+| 10 g (later) | $35.00 | $6.00 | $41.00 | $199 | $7.07 | $150.93 | 76% |
 
 Powder margins are high because repackaging is the value-add and we carry the
 compliance (COA surfacing, acknowledgment flow). Retail stays **inside the
@@ -161,10 +161,18 @@ else (trial size, subscription, a second serum) is deliberately deferred so the
 storefront says one clear thing: a disclosed Copper Tripeptide-1 serum, and the
 same peptide as a formulator powder in two sizes.
 
+**Supersedes storefront.md MVP (one powder variant → two).** storefront.md MVP
+specifies "one raw-material product, one variant." This catalog keeps one powder
+*product* but launches **two pack-weight variants** (1 g, 5 g). This is
+data-model-legal — storefront.md allows the powder to "vary by pack weight only"
+— and storefront.md's MVP line is updated to match in the same change.
+
 ### The serum — 1 SKU (`productType: cosmetic`, claimClass `cosmetic_appearance`)
 
-**P1 — Copper Tripeptide-1 Serum 1%  ·  30 mL  ·  $48  (the hero, the whole cosmetic line)**
+**P1 — Copper Tripeptide-1 Serum 1%  ·  30 mL (target)  ·  $48  (the hero, the whole cosmetic line)**
 - INCI headline: Copper Tripeptide-1 ({percent} on label, target 1%).
+- Size note: under dropship the 30 mL net contents is the partner's label fact,
+  not our pick — confirm the partner's actual fill before publish, same as the %.
 - One sentence: "GHK-Cu in a finished, water-based serum — the percent printed
   on the label, the lot's certificate yours to download."
 - Appearance claims only: look of fine lines, softer-looking texture, skin that
@@ -220,7 +228,7 @@ framework pending confirmed landed COGS (§7 Q2).
    only lever is the negotiated wholesale.
 2. **Landed raw cost + cosmetic-grade COA source for powder.** Assumed $2–5/g;
    confirm a supplier that ships a usable cosmetic-grade COA with CAS 89030-95-5
-   before committing R1–R3 prices.
+   before committing R1–R2 prices.
 3. **Repack/compliance cost per powder unit.** Assumed ~$4–6; vial, desiccant,
    label, COA handling, inbound. Confirm.
 4. **Processing rate.** Assumed Shopify Payments 2.9% + $0.30; confirm plan.

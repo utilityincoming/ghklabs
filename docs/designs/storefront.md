@@ -235,7 +235,7 @@ This section is a product constraint list for counsel to confirm. It is not a de
 **MVP**
 
 - Next.js storefront for the routes above, minus account UI beyond linking to Shopify customer accounts.
-- One serum product and one raw-material product, each with one variant and one released COA.
+- One serum product (one variant) and one raw-material product (two pack-weight variants: 1 g, 5 g), each with a released COA. The powder's two variants are set in [pricing-and-products.md](pricing-and-products.md); pack-weight variation is allowed by the Variant data model above.
 - Cart with the two disclaimer behaviors, Shopify checkout, test-mode purchase.
 - Five pages of fixed legal copy, one science pillar, two journal posts, quality index.
 - Claim review checklist in the repo (a markdown list a human signs before publish): [pre-publish-checklist.md](pre-publish-checklist.md).
