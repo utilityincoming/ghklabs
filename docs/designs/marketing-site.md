@@ -14,9 +14,11 @@ The page is original markup. It does not vendor a paid template.
 
 ## Color
 
-The accent is the blue of GHK-Cu in solution. The copper(II) d–d band of the 1:1 complex sits near 606 nm at pH 7.4, so the complex absorbs orange-red light and the light that gets through is blue, slightly violet because the band is broad and leaves a little red (Ufnalska et al., Inorg. Chem. 2021). Unbound aqua copper absorbs near 816 nm and looks cyan. That cyan is not the peptide color.
+The page is light. The blue it attributes is the color of light that has passed through GHK-Cu.
 
-No paper publishes a hex code. `--signal` (`#7eb6ff`) is a thin-layer rendering of a broad 606 nm band under D65, light enough to read on the ink. `--solution` (`#3d78e6`) is the deeper color of a full vial. Ink and paper are cooled toward that glass. Amber and coral stay the warning and failure colors so the trace does not paint every state with the brand blue.
+Cu(II)GHK at pH 7.4 has a d–d maximum at 606 nm (Ufnalska et al., Inorg. Chem. 2021). A broad Gaussian on that center, 70 nm wide, under D65 transmits sRGB `#6c9ef9`, hue about 226°. That hex is `--signal` and `--solution`. It is the fill for buttons, the delivered state, and the trace glow. Unbound aqua copper absorbs near 816 nm and looks cyan. That cyan is not this blue.
+
+`#6c9ef9` on the paper is about 2.5:1, so it is not used for small type. Kickers, the wordmark, and the signature label use `#1f4eae` (`--ink-blue`), the same hue darkened until it clears about 7:1 on `#f5f8fc`. Body text is `#102033`. Warning and failure are `#c56a12` and `#c2412d` so they stay distinct on the light ground.
 
 ## Behavior
 
