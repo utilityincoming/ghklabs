@@ -155,8 +155,44 @@ GHK Labs is the seller. Your order is fulfilled and shipped by our fulfillment p
 - **Recall banner** — Recalled: lot {lot}. Do not use. [What happened.]
 - **Cart note** — Cosmetic for appearance and feel. Not a drug.
 - **Ships-from note** — Sold by GHK Labs. Fulfilled and shipped by our fulfillment partner.
-- **Disclosure slot (reserved)** — Rendered only if the sourcing posture is affiliate rather than reseller. Generic by design, names no partner. Draft: "We may earn a commission on this purchase." Leave unrendered under the merchant-of-record model (see fulfillment-model.md, Q1).
+- **Disclosure slot (reserved)** — Unused under the decided reseller / merchant-of-record posture ([fulfillment-model.md](fulfillment-model.md), Decided). Kept in the component only so an affiliate surface, if one ever exists, has a generic, partner-free line ("We may earn a commission on this purchase"). Not rendered on the store.
 - **Formulator checkbox** — I am buying GHK-Cu as a cosmetic ingredient to formulate. It is not a finished product to swallow, inject, or apply as sold.
+
+## Policy pages
+
+Draft copy for the `/legal` routes, in the brand voice. Not legal advice; counsel confirms terms, the entity, the responsible person, and the windows before publish. `{braces}` are facts to fill from the operating setup (entity, address, support channel, lead time, return window) and the supply partner's actual RMA terms. The supply partner is not named.
+
+### Shipping — `/legal/shipping`
+
+**Who you buy from.** GHK Labs is the seller of record. {entity}, {address}.
+
+**How it ships.** Your order is fulfilled and shipped by our fulfillment partner. We hand the order to them after payment clears; they pick, pack, and ship it.
+
+**When.** Orders usually leave within {handling_time} and arrive within {lead_time} to US addresses. These are the partner's timelines, not a same-day promise. We ship to the United States only for now.
+
+**Tracking.** You get a tracking link when the order ships. If a parcel stalls or arrives damaged, write {support_email} and we sort it out.
+
+**What's on the box.** The parcel may show the fulfillment partner as the shipper. The product, lot, and the manufacturer's COA are unchanged by who hands it to the carrier.
+
+### Returns — `/legal/returns`
+
+**The window.** You have {return_window} from delivery to start a return. Email {support_email} first; we send the return instructions and the address.
+
+**Condition.** For a hygiene product, we can accept {return_condition} (for example, unopened, with the lot code intact). We say exactly what qualifies before you ship anything back.
+
+**Refunds.** Once the return reaches our fulfillment partner and checks out, we refund the item price to the original payment method within {refund_time}. Original shipping is {shipping_refund_rule}.
+
+**A problem with the product.** If an item arrives wrong, damaged, or past its date, that is on us — email {support_email} with the lot code and a photo, and we replace or refund it without the return dance.
+
+**Adverse reaction.** If the serum irritates your skin, rinse off and stop. For a reaction you want on record, use the adverse-event contact on [Contact]; that is separate from a return and it reaches the responsible person for the product.
+
+### Cosmetic disclaimer — `/legal/cosmetic-disclaimer`
+
+This is a cosmetic, sold for the look and feel of skin: softer-looking texture and a moisturized feel. It is not a drug. It is not meant to treat, prevent, or change any disease or condition, and nothing on this site should be read that way.
+
+Studies of GHK-Cu as a molecule are linked on the science pages, labeled as studies. They describe what a paper measured, in cells, in animals, or in people. They are not a test of this serum and not a claim about what it does on your skin.
+
+Use on clean, intact skin. Patch-test first. If redness, burning, itching, or blistering shows up, rinse off and stop, and talk to a physician if it persists. Keep out of reach of children. The package label is the controlling document for ingredients, warnings, and the responsible person; this page does not replace it.
 
 ## Out of scope
 
