@@ -119,6 +119,74 @@ Use this order on home, PDP, and the pillar. Skip a step only when the page is n
 4. Make the COA a link with the lot code visible, not a badge that says “lab tested.”
 5. Ask once, with a verb that matches the product: “Shop the serum” or “Read the powder spec.” Do not offer both as equal heroes.
 
+## Two page drafts
+
+Read 18 November 2026 (America/Chicago). These follow the shape of two sellers. They do not copy their claims, prices, or formulas.
+
+**Finished serum: The Ordinary.** Their Multi-Peptide + Copper Peptides 1% page is a white-label pattern we can use: name the technology in the title, one overview line, a targets / suited-for / format row, free-from chips, a short about, then how to use (a few drops, morning and evening, unbroken skin, patch test, stop if irritation, keep from children). We do not import their stack of peptide trademarks, their “1%” blend name, or lines about elasticity, regeneration, or collagen. A white-label serum has one hero ingredient until a real INCI list exists.
+
+**Raw powder: Peptaura.** Their GHK-Cu pages are a spec table: pack, purity, batch, identity, mass, and a COA you can open. That table is the pattern. We do not import the rest of the offer. Peptaura lists lyophilized vials in milligrams, price per milligram, and research-use language on the certificates it hosts. This catalog sells a cosmetic ingredient to formulators, by net weight, with no vial, no per-milligram price, and no research-only wink. Storefront default stands.
+
+Braces are unpublished facts. Leave them blank on the live page until the label or the released COA has the number.
+
+### Finished serum
+
+**Copper Tripeptide-1 serum**
+
+A water-based serum for the look of fine lines and the feel of moisturized skin.
+
+| | |
+| --- | --- |
+| Targets | The look of fine lines. Dry-feeling skin. |
+| Suited for | Skin that already uses a serum. Patch-test first. |
+| Format | Serum, water-based. {size}. |
+| Copper Tripeptide-1 | {percent}, printed on the label. |
+
+pH {range}, once the formula sheet says so. Alcohol-free, oil-free, and silicone-free only if the INCI confirms each one.
+
+**About**
+
+Copper Tripeptide-1 is the label name for GHK-Cu, a copper complex of three amino acids. This bottle is that ingredient in a finished cosmetic, at {percent}, in {size}. It is meant to soften the look of texture and leave skin feeling moisturized. Studies of the molecule are a different page. They are not a test of this serum.
+
+**How to use**
+
+- After cleansing, apply a few drops to the face, morning and evening.
+- Follow with a moisturizer if you want one.
+- Use on unbroken skin only.
+- Patch-test on the inner forearm before the first full use. If redness, burning, itching, or blistering shows up, rinse off and stop.
+- If irritation occurs, rinse off, stop, and talk to a physician.
+- Keep out of reach of children.
+
+**Specs**
+
+{size}. {price}. Lot {lot}, released {date}. Identity by {method}. Full INCI on the package, in descending order. Current COA on the lot line.
+
+Add to bag.
+
+### Raw GHK-Cu
+
+**GHK-Cu, cosmetic ingredient**
+
+{net weight} of GHK-Cu powder for people who formulate. Not a finished serum. Not a vial.
+
+| | |
+| --- | --- |
+| Net weight | {net weight} |
+| Identity | GHK-Cu, method {method} |
+| Purity | {purity}, same figure as the COA |
+| Lot | {lot} |
+| COA | Download. A replaced file changes the recorded hash. |
+
+**About**
+
+You are buying the ingredient, identified and weighed. The number on this page matches the certificate for this lot. Storage is whatever that certificate says. There is no mix rate for skin, and no instruction for swallowing or injecting. Confirm the formulator notice before checkout.
+
+**Specs**
+
+{net weight}. {price}. Lot {lot}. {method}. {purity}.
+
+Read the powder spec.
+
 ## Out of scope
 
 Naming a legal entity, writing the claim sheet, inventing concentrations, and translating this voice into ads. Ads later use the same banned-word list. This draft does not accept the storefront; question 9 there (brand name and visual reference) can point at this voice without closing the other open questions.
