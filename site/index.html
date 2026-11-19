@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>GHK Labs — Outbound webhook delivery</title>
-  <meta name="description" content="Register an endpoint, publish an event, and keep delivering after the process restarts. Signed with HMAC-SHA256. Retried up to five times." />
+  <title>GHK Labs — Copper Tripeptide-1 serum</title>
+  <meta name="description" content="A blue copper-peptide serum with the peptide named, the percent printed, and the lot on the glass. A cosmetic for the look and feel of skin. The COA is a link, not a badge." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Schibsted+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -16,128 +16,125 @@
   <header class="top">
     <a class="mark" href="#top">GHK<span>Labs</span></a>
     <nav>
-      <a href="#trace">Trace</a>
-      <a href="#calls">Calls</a>
-      <a href="#signature">Signature</a>
-      <a href="#runtime">Runtime</a>
+      <a href="#evidence">Evidence</a>
+      <a href="#serum">Serum</a>
+      <a href="#verify">Verify</a>
+      <a href="#quality">Quality</a>
     </nav>
-    <a class="pill" href="#calls">Three calls</a>
+    <a class="pill" href="#serum">Shop the serum</a>
   </header>
 
   <main id="top">
     <section class="hero">
-      <p class="kicker">Outbound delivery</p>
-      <h1>Delivery that continues after the process exits.</h1>
-      <p class="lede">Register an endpoint, publish an event, and drain what is still pending. The body is signed before the first attempt.</p>
-      <p class="signature"><span>X-GHK-Signature:</span> t=&lt;unix&gt;,v1=&lt;hex&gt;</p>
-      <p class="sig-note">HMAC-SHA256 of <span class="mono">&lt;unix&gt;.&lt;body&gt;</span> with the endpoint secret.</p>
+      <p class="kicker">Copper Tripeptide-1, for skin</p>
+      <h1>A blue serum with the peptide named and the lot on the glass.</h1>
+      <p class="lede">GHK-Cu is a small copper complex people have studied for decades. Those studies are not the same thing as a bottle. Ours is a cosmetic for the look and feel of skin — softer-looking texture, a moisturized feel — and nothing that pretends to treat a condition.</p>
+      <p class="signature"><span>On this lot:</span> {lot} · {method} identity · {purity}</p>
+      <p class="sig-note">The COA is a link with the lot code on it, not a badge that says <span class="mono">lab tested</span>.</p>
       <div class="hero-actions">
-        <a class="pill solid" href="#calls">See the calls</a>
-        <a class="textlink" href="#trace">Watch a delivery</a>
+        <a class="pill solid" href="#serum">Shop the serum</a>
+        <a class="textlink" href="#evidence">Read what the papers measured</a>
       </div>
       <dl class="facts">
-        <div><dt>Header</dt><dd>X-GHK-Signature</dd></div>
-        <div><dt>Mac</dt><dd>HMAC-SHA256</dd></div>
-        <div><dt>Attempts</dt><dd>Five, then failed</dd></div>
-        <div><dt>Store</dt><dd>SQLite or Postgres</dd></div>
+        <div><dt>Peptide</dt><dd>Copper Tripeptide-1</dd></div>
+        <div><dt>Common name</dt><dd>GHK-Cu</dd></div>
+        <div><dt>Claim</dt><dd>Appearance and feel</dd></div>
+        <div><dt>Proof</dt><dd>COA on the lot line</dd></div>
       </dl>
     </section>
 
-    <section class="stage" id="trace">
+    <section class="stage" id="evidence">
       <div class="stage-copy">
-        <p class="kicker">Delivery trace</p>
-        <h2>One event, one row per endpoint.</h2>
-        <p>Publishing writes a pending delivery for each matching subscriber and tries it immediately. A miss stays due. The drainer claims the row for thirty seconds so two workers do not both send it.</p>
+        <p class="kicker">Evidence boundary</p>
+        <h2>Three amino acids, copper, and rooms we keep separate.</h2>
+        <p>GHK-Cu is glycyl-L-histidyl-L-lysine bound to copper. A result in a dish is not a result on a face, and a study of the molecule is not a test of this serum. Watch where each finding lives — and where this bottle stops.</p>
         <ol class="legend" id="legend"></ol>
       </div>
       <div class="trace" id="trace-card" aria-live="polite">
         <div class="trace-top">
           <span class="dot" id="trace-dot"></span>
-          <span id="trace-state">pending</span>
-          <span class="mono" id="trace-id">dlv_8f2</span>
+          <span id="trace-state">molecule</span>
+          <span class="mono" id="trace-id">GHK-Cu</span>
         </div>
-        <p class="trace-line" id="trace-line">Waiting for the first attempt.</p>
+        <p class="trace-line" id="trace-line">Three amino acids plus copper.</p>
         <div class="rail" aria-hidden="true"><span id="rail-fill"></span></div>
         <ul class="attempts" id="attempts"></ul>
       </div>
     </section>
 
-    <section id="calls">
+    <section id="serum">
       <div class="section-head">
-        <p class="kicker">API</p>
-        <h2>Bearer token on every <span class="mono">/v1</span> route.</h2>
+        <p class="kicker">On the glass</p>
+        <h2>One number per line, each one printed on the label.</h2>
       </div>
       <div class="calls">
         <article>
-          <header><span>01</span><h3>Register</h3></header>
-          <p>Create or replace a subscriber. An empty type list receives every event.</p>
-          <pre><code id="code-register">curl -s -H "Authorization: Bearer $GHK_API_TOKEN" \
-  -H "Content-Type: application/json" \
-  -d '{"id":"lab","url":"https://example.com/hooks","secret":"sek","types":["lot.released"]}' \
-  http://localhost:8080/v1/endpoints</code></pre>
-          <button type="button" data-copy="code-register">Copy</button>
+          <header><span>01</span><h3>The peptide</h3></header>
+          <p>Copper Tripeptide-1 is the INCI name for GHK-Cu. It is the one hero ingredient on this page, named in plain words.</p>
+          <pre><code id="code-register">Copper Tripeptide-1 (GHK-Cu)
+water-based serum, {size}</code></pre>
+          <button type="button" data-copy="code-register">Copy the INCI name</button>
         </article>
         <article>
-          <header><span>02</span><h3>Publish</h3></header>
-          <p>Required fields are <span class="mono">id</span> and <span class="mono">type</span>. <span class="mono">data</span> is JSON. The response includes delivery ids and drain counts.</p>
-          <pre><code id="code-publish">curl -s -H "Authorization: Bearer $GHK_API_TOKEN" \
-  -H "Content-Type: application/json" \
-  -d '{"id":"evt_1","type":"lot.released","data":{"lot":"A"}}' \
-  http://localhost:8080/v1/events</code></pre>
-          <button type="button" data-copy="code-publish">Copy</button>
+          <header><span>02</span><h3>The percent</h3></header>
+          <p>The stated concentration is on the label, in descending-order INCI. We print the figure; we do not round it up into an adjective.</p>
+          <pre><code id="code-publish">Copper Tripeptide-1 at {percent}
+pH {range}, once the formula sheet says so</code></pre>
+          <button type="button" data-copy="code-publish">Copy the spec line</button>
         </article>
         <article>
-          <header><span>03</span><h3>Bearer</h3></header>
-          <p>Every <span class="mono">/v1</span> route requires <span class="mono">Authorization: Bearer</span> and <span class="mono">GHK_API_TOKEN</span>. Drain accepts that header or <span class="mono">CRON_SECRET</span>.</p>
-          <pre><code id="code-bearer">curl -s -H "Authorization: Bearer $GHK_API_TOKEN" \
-  -X POST http://localhost:8080/v1/drain</code></pre>
-          <button type="button" data-copy="code-bearer">Copy</button>
+          <header><span>03</span><h3>The lot</h3></header>
+          <p>Each unit carries its lot and release date. The number on this page matches the certificate for that lot, and no other.</p>
+          <pre><code id="code-lot">Lot {lot}, released {date}
+identity by {method} · purity {purity}</code></pre>
+          <button type="button" data-copy="code-lot">Copy the lot line</button>
         </article>
       </div>
     </section>
 
-    <section id="signature" class="split">
+    <section id="verify" class="split">
       <div>
-        <p class="kicker">Signing</p>
-        <h2>The receiver can check the body without trusting the path.</h2>
-        <p>The header is <span class="mono">t=&lt;unix&gt;,v1=&lt;hex&gt;</span>. The MAC is HMAC-SHA256 of <span class="mono">&lt;unix&gt;.&lt;body&gt;</span> with the endpoint secret. <span class="mono">GET /v1/deliveries/{id}</span> returns status and attempts and leaves the secret out.</p>
+        <p class="kicker">Verify</p>
+        <h2>You can check the lot without trusting the label.</h2>
+        <p>The COA names the method and the figure: identity by <span class="mono">{method}</span>, purity <span class="mono">{purity}</span>, for lot <span class="mono">{lot}</span>. Download the same file we hold. If a certificate is ever replaced, the recorded hash of the file changes — so what you open is the one tied to the unit you can buy.</p>
       </div>
       <figure>
-        <figcaption>X-GHK-Signature</figcaption>
-        <pre>t=1731960000,v1=9c1e…a4
-payload = "1731960000." + raw_body</pre>
+        <figcaption>Certificate of analysis</figcaption>
+        <pre>lot      {lot}
+identity {method}
+purity   {purity}</pre>
       </figure>
     </section>
 
-    <section id="runtime">
+    <section id="quality">
       <div class="section-head">
-        <p class="kicker">Where it runs</p>
-        <h2>Same rules in memory, in SQLite, and on Postgres.</h2>
+        <p class="kicker">What we sell</p>
+        <h2>A finished serum for skin, and the powder for people who formulate.</h2>
       </div>
       <div class="grid">
         <article>
-          <h3>Long-running server</h3>
-          <p><span class="mono">cmd/ghklabs</span> stores endpoints and deliveries and drains due work about once a second. <span class="mono">GHK_DB</span> defaults to <span class="mono">data/ghk.db</span>.</p>
+          <h3>The serum</h3>
+          <p>A water-based cosmetic for the look of fine lines and the feel of moisturized skin. Apply a few drops to clean, intact skin, morning or night. Patch-test first. Keep out of reach of children.</p>
         </article>
         <article>
-          <h3>Postgres</h3>
-          <p>A <span class="mono">DATABASE_URL</span> that starts with <span class="mono">postgres://</span> or <span class="mono">postgresql://</span> selects Postgres. That is the store that survives on Vercel.</p>
+          <h3>The powder</h3>
+          <p>GHK-Cu by net weight, a cosmetic ingredient for formulators. Not a finished serum and not a vial. No mix rate for skin, and no instruction for swallowing or injecting. Confirm the formulator notice before checkout.</p>
         </article>
         <article>
-          <h3>Daily cron</h3>
-          <p>On Vercel, <span class="mono">GET /api</span> runs the same drain once a day. Hobby schedules cannot run more often. A SQLite file does not persist across invocations.</p>
+          <h3>The COA</h3>
+          <p>We publish the lot that is on the unit you can buy. If a number is not on that certificate, it is not on this page. The method sits beside the purity figure, every time.</p>
         </article>
         <article>
-          <h3>Library</h3>
-          <p><span class="mono">webhook.Dispatcher</span> signs and retries in memory underneath the same header. Callers still invoke <span class="mono">DeliverOnce</span>.</p>
+          <h3>A recall</h3>
+          <p>A recalled lot stays listed, with the recall in its first line. It is never attached to a buy button. The quiet lots just sell; the loud one tells you first.</p>
         </article>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>GHK Labs · outbound webhook delivery</p>
-    <p class="mono">GET /healthz → {"status":"ok"}</p>
+    <p>GHK Labs · Copper Tripeptide-1 for the look and feel of skin</p>
+    <p class="mono">Cosmetic. Not a drug. Studies of the molecule are linked as papers.</p>
   </footer>
   <script src="trace.js"></script>
 </body>
