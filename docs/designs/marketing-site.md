@@ -12,6 +12,12 @@ Start from the shape of a shadcn SaaS product site (21st’s Saazio is the close
 
 The page is original markup. It does not vendor a paid template.
 
+## Color
+
+The accent is the blue of GHK-Cu in solution. The copper(II) d–d band of the 1:1 complex sits near 606 nm at pH 7.4, so the complex absorbs orange-red light and the light that gets through is blue, slightly violet because the band is broad and leaves a little red (Ufnalska et al., Inorg. Chem. 2021). Unbound aqua copper absorbs near 816 nm and looks cyan. That cyan is not the peptide color.
+
+No paper publishes a hex code. `--signal` (`#7eb6ff`) is a thin-layer rendering of a broad 606 nm band under D65, light enough to read on the ink. `--solution` (`#3d78e6`) is the deeper color of a full vial. Ink and paper are cooled toward that glass. Amber and coral stay the warning and failure colors so the trace does not paint every state with the brand blue.
+
 ## Behavior
 
 - A static site at `site/` explains outbound delivery: register an endpoint, publish an event, drain what is still pending.
