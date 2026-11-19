@@ -87,7 +87,7 @@ Primary: Shop the serum.
 
 Secondary: See this lot.
 
-Proof line: Lot {lot}. Identity by {method}. Purity {purity}. The certificate is the file for that lot.
+Proof line: Lot {lot}. Identity by {method}. Purity {purity}. The manufacturer's certificate is the file for that lot.
 
 Below the fold, one quiet line: A cosmetic for the look and feel of skin. Notes on the published research sit on the science page.
 
