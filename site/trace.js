@@ -40,21 +40,44 @@ function paint() {
 }
 
 paint();
-setInterval(paint, 2200);
+const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+if (!reduce) setInterval(paint, 2200);
+
+async function copyText(text) {
+  if (navigator.clipboard && window.isSecureContext) {
+    try {
+      await navigator.clipboard.writeText(text);
+      return true;
+    } catch {
+      /* fall through to the selection copy */
+    }
+  }
+  const area = document.createElement("textarea");
+  area.value = text;
+  area.setAttribute("readonly", "");
+  area.style.position = "fixed";
+  area.style.left = "-9999px";
+  document.body.appendChild(area);
+  area.select();
+  let ok = false;
+  try {
+    ok = document.execCommand("copy");
+  } catch {
+    ok = false;
+  }
+  area.remove();
+  return ok;
+}
 
 document.querySelectorAll("[data-copy]").forEach((button) => {
   button.addEventListener("click", async () => {
     const code = document.getElementById(button.dataset.copy);
-    try {
-      await navigator.clipboard.writeText(code.textContent);
-      button.textContent = "Copied";
-      button.classList.add("done");
-      setTimeout(() => {
-        button.textContent = "Copy";
-        button.classList.remove("done");
-      }, 1400);
-    } catch {
-      button.textContent = "Select the block";
-    }
+    const ok = await copyText(code.textContent);
+    button.textContent = ok ? "Copied" : "Select the block";
+    button.classList.toggle("done", ok);
+    setTimeout(() => {
+      button.textContent = "Copy";
+      button.classList.remove("done");
+    }, 3000);
   });
 });
