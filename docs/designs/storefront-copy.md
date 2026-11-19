@@ -8,9 +8,13 @@ This is copy, not legal advice. Counsel signs the claim sheet before a page ship
 
 GHK Labs resells a finished cosmetic and ships it by dropship (see [fulfillment-model.md](fulfillment-model.md)). So the copy attributes the COA to the manufacturer, never to an in-house lab, and is truthful about third-party fulfillment. The supply partner is not named on any consumer surface.
 
+**Public name is provisional.** This copy uses "GHK Labs" as the seller's display name; internal design docs use the repo slug "ghklabs." The brand name is still open (storefront.md Q9), and `{entity}` / `{address}` are unresolved, so "GHK Labs" is the working public spelling, not a settled trade name. Lock one form before publish.
+
 `{braces}` are facts we do not invent — concentration, lot, purity, method, price, size, pH, date. They come from the label and the released COA before publish, and stay blank on the live page until that number exists. Banned on product pages: *heal, repair, recover, reverse, stimulate/boost collagen, DNA, gene, inflammation, wound, hair growth, clinical proof, proven, doctor-recommended, biohack (verb), research use only, injectable, subcutaneous, reconstitute, dose, protocol.* Science pages may name those words to explain why a paper does not transfer; they do not then attach them to the SKU.
 
-**Price and size are commercial decisions, not COA facts**, so they are resolved here from the suggested catalog in [pricing-and-products.md](pricing-and-products.md). They are draft suggestions, gated on the confidential partner wholesale and confirmed raw COGS, and the principals sign off before publish. The label/COA braces (`{percent}`, `{lot}`, `{purity}`, `{method}`, `{pH}`, `{date}`) still stay blank until the label and released COA supply them.
+**Prices are commercial decisions**, resolved here from the suggested catalog in [pricing-and-products.md](pricing-and-products.md). They are draft suggestions, gated on the confidential partner wholesale and confirmed raw COGS, and the principals sign off before publish.
+
+**Size is split.** The **powder** pack weights (1 g, 5 g) are genuinely commercial — GHK Labs buys bulk and repacks — so they are resolved here. The **serum's 30 mL is a target, not a settled fact**: under dropship the finished bottle's net contents is the partner's label figure, so it is confirmed against the partner's actual fill before publish, the same way `{percent}` is shown as "target 1%." Treat every "30 mL" below as "target 30 mL, pending partner fill." The remaining label/COA braces (`{percent}`, `{lot}`, `{purity}`, `{method}`, `{pH}`, `{date}`, per-pack `{net weight}`) stay blank until the label and released COA supply them.
 
 ---
 
@@ -78,7 +82,7 @@ The first screen sells the serum. It names the ingredient, the look and feel, an
 | Format | Serum, water-based. 30 mL. |
 | Copper Tripeptide-1 | {percent}, printed on the label. |
 
-pH {range}, once the formula sheet says so. Alcohol-free, oil-free, and silicone-free only if the INCI confirms each one.
+pH {range}, once the formula sheet says so. "Water-based," alcohol-free, oil-free, and silicone-free each render only if the partner's INCI / formula sheet confirms it — the formula is the partner's, so none of these is asserted unconfirmed.
 
 ### About
 
