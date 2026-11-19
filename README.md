@@ -30,7 +30,7 @@ _ = d.DeliverOnce(ctx, ids[0])
 
 The accepted API design is `docs/designs/webhook-api.md`.
 
-The product page is a static site in `site/` (`docs/designs/marketing-site.md`). It documents the same calls and does not change the API. Serve it with any static file server from that directory. The Vercel rewrite still sends the API deployment at `/` to `api`.
+The product page is a static site in `site/` (`docs/designs/marketing-site.md`). It documents the same calls and does not change `/v1`. Serve it with any static file server from that directory. On Vercel, `/` rewrites to `site/index.html`, and `/v1/*` plus `/healthz` still rewrite to the Go handler. `GET /healthz` is the public health check on that deployment, because `/` is the page.
 
 Greenfield project set up for [Elephant-Goldfish Model](https://github.com/google/elephant-goldfish-model) (EGM) design-driven development.
 

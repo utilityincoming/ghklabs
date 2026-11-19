@@ -20,7 +20,7 @@ The page is original markup. It does not vendor a paid template.
 - The API section shows the three calls from the README: create an endpoint, publish an event, and the bearer requirement. Copy buttons copy those samples.
 - Runtime notes stay factual: SQLite via `GHK_DB`, Postgres via `DATABASE_URL`, long-running drain about once a second, Vercel cron once a day through `GET /api`. A SQLite file does not persist on Vercel.
 - No pricing, logos, testimonials, or subscriber console. Those are out of scope in the webhook API design.
-- The Go API and `vercel.json` rewrite stay the API deployment. This site is a separate static project.
+- On Vercel, `/` serves this page. `/styles.css`, `/trace.js`, and `/favicon.svg` are the files in `site/`. `/v1/*` and `/healthz` still reach the Go handler. Cron still calls `GET /api`. The long-running server is unchanged: `GET /` there remains the health JSON.
 
 ## Out of scope
 
