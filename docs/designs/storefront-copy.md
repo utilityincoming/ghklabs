@@ -8,7 +8,27 @@ This is copy, not legal advice. Counsel signs the claim sheet before a page ship
 
 GHK Labs resells a finished cosmetic and ships it by dropship (see [fulfillment-model.md](fulfillment-model.md)). So the copy attributes the COA to the manufacturer, never to an in-house lab, and is truthful about third-party fulfillment. The supply partner is not named on any consumer surface.
 
+**Public name is provisional.** This copy uses "GHK Labs" as the seller's display name; internal design docs use the repo slug "ghklabs." The brand name is still open (storefront.md Q9), and `{entity}` / `{address}` are unresolved, so "GHK Labs" is the working public spelling, not a settled trade name. Lock one form before publish.
+
 `{braces}` are facts we do not invent — concentration, lot, purity, method, price, size, pH, date. They come from the label and the released COA before publish, and stay blank on the live page until that number exists. Banned on product pages: *heal, repair, recover, reverse, stimulate/boost collagen, DNA, gene, inflammation, wound, hair growth, clinical proof, proven, doctor-recommended, biohack (verb), research use only, injectable, subcutaneous, reconstitute, dose, protocol.* Science pages may name those words to explain why a paper does not transfer; they do not then attach them to the SKU.
+
+**Prices are commercial decisions**, resolved here from the suggested catalog in [pricing-and-products.md](pricing-and-products.md). They are draft suggestions, gated on the confidential partner wholesale and confirmed raw COGS, and the principals sign off before publish.
+
+**Size is split.** The **powder** pack weights (1 g, 5 g) are genuinely commercial — GHK Labs buys bulk and repacks — so they are resolved here. The **serum's 30 mL is a target, not a settled fact**: under dropship the finished bottle's net contents is the partner's label figure, so it is confirmed against the partner's actual fill before publish, the same way `{percent}` is shown as "target 1%." Treat every "30 mL" below as "target 30 mL, pending partner fill." The remaining label/COA braces (`{percent}`, `{lot}`, `{purity}`, `{method}`, `{pH}`, `{date}`, per-pack `{net weight}`) stay blank until the label and released COA supply them.
+
+---
+
+## Catalog
+
+Three SKUs: one serum, two powder sizes. Nothing else ships at launch.
+
+| SKU | Type | Size | Price | Claim class | Channel |
+| --- | --- | --- | --- | --- | --- |
+| Copper Tripeptide-1 Serum | cosmetic | 30 mL | $48 | `cosmetic_appearance` | Public |
+| GHK-Cu Powder (entry) | raw_material | 1 g | $34 | `identity_only` | Public |
+| GHK-Cu Powder (formulator) | raw_material | 5 g | $119 | `identity_only` | Public |
+
+Bulk powder (100 g / 1 kg) is a later B2B/quote tier, not public checkout ([pricing-and-products.md](pricing-and-products.md) §2, §6).
 
 ---
 
@@ -44,7 +64,7 @@ The first screen sells the serum. It names the ingredient, the look and feel, an
 
 **Copper Tripeptide-1 serum**
 
-{Size}. {Price}. Copper Tripeptide-1 at {percent} in a finished, water-based serum.
+30 mL. $48. Copper Tripeptide-1 at {percent} in a finished, water-based serum.
 
 - **What it is for** — the look of fine lines and the feel of moisturized skin. Apply to clean, intact skin, morning or night.
 - **What it is not** — a drug, a wound treatment, or a lesson in how to inject anything.
@@ -59,14 +79,14 @@ The first screen sells the serum. It names the ingredient, the look and feel, an
 | --- | --- |
 | Targets | The look of fine lines. Dry-feeling skin. |
 | Suited for | Skin that already uses a serum. Patch-test first. |
-| Format | Serum, water-based. {size}. |
+| Format | Serum, water-based. 30 mL. |
 | Copper Tripeptide-1 | {percent}, printed on the label. |
 
-pH {range}, once the formula sheet says so. Alcohol-free, oil-free, and silicone-free only if the INCI confirms each one.
+pH {range}, once the formula sheet says so. "Water-based," alcohol-free, oil-free, and silicone-free each render only if the partner's INCI / formula sheet confirms it — the formula is the partner's, so none of these is asserted unconfirmed.
 
 ### About
 
-Copper Tripeptide-1 is the label name for GHK-Cu, a copper complex of three amino acids. This bottle is that ingredient in a finished cosmetic, at {percent}, in {size}. It is meant to soften the look of texture and leave skin feeling moisturized. Studies of the molecule are a different page. They are not a test of this serum.
+Copper Tripeptide-1 is the label name for GHK-Cu, a copper complex of three amino acids. This bottle is that ingredient in a finished cosmetic, at {percent}, in 30 mL. It is meant to soften the look of texture and leave skin feeling moisturized. Studies of the molecule are a different page. They are not a test of this serum.
 
 ### How to use
 
@@ -79,7 +99,7 @@ Copper Tripeptide-1 is the label name for GHK-Cu, a copper complex of three amin
 
 ### Specs
 
-{size}. {price}. Lot {lot}, released {date}. Identity by {method}. Full INCI on the package, in descending order. Current COA on the lot line.
+30 mL. $48. Lot {lot}, released {date}. Identity by {method}. Full INCI on the package, in descending order. Current COA on the lot line.
 
 ---
 
@@ -115,11 +135,20 @@ We have not run a finished-product test on this serum. When we do, it gets its o
 
 **GHK-Cu, cosmetic ingredient**
 
-{Net weight} of GHK-Cu powder for people who formulate. Not a finished serum. Not a vial.
+GHK-Cu powder for people who formulate, in two pack weights. Not a finished serum. Not a vial.
+
+**Pack weight**
+
+| Size | Price | Per gram |
+| --- | --- | --- |
+| 1 g | $34 | $34.00 |
+| 5 g | $119 | $23.80 |
+
+One product, one formula, priced by pack weight only — the 5 g is the formulator buy, cheaper per gram. Larger volume (100 g, 1 kg) is a B2B/quote request, not a cart item.
 
 | | |
 | --- | --- |
-| Net weight | {net weight} |
+| Net weight | {net weight} (per selected pack) |
 | Identity | GHK-Cu, method {method} |
 | Purity | {purity}, same figure as the COA |
 | Lot | {lot} |
@@ -131,7 +160,7 @@ You are buying the ingredient, identified and weighed. The number on this page m
 
 ### Specs
 
-{net weight}. {price}. Lot {lot}. {method}. {purity}.
+1 g — $34 · 5 g — $119. Net weight {net weight} for the selected pack. Lot {lot}. {method}. {purity}.
 
 **Read the powder spec.**
 
