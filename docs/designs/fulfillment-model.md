@@ -1,6 +1,6 @@
 # Fulfillment model: dropship reseller
 
-Status: draft
+Status: accepted
 
 This document records how ghklabs sources and ships the goods it sells, and what that reality forces to be true in copy, data, and compliance. It is the groundwork layer under [storefront.md](storefront.md); where the two disagree, the difference is called out here and `storefront.md` follows it. It is not legal advice. Counsel and a payments underwriter review the reseller posture before launch.
 
@@ -96,3 +96,5 @@ None of the above names the partner. All of it is compatible with a private agre
 ## Acceptance
 
 Question 1 (posture) is decided: reseller. Accept after questions 2–3 and 8 are answered or defaults explicitly kept. The COA-provenance, inventory, and fulfillment deltas are folded into `storefront.md`.
+
+**Accepted 2026-11-19.** Posture decided (reseller / merchant of record); Q2 (manual hand-off in MVP, feed in phase 2) and Q3 (re-host the COA, attributed to the manufacturer) defaults explicitly kept. Q4–Q7 defaults kept. Q8 (MoCRA responsible person) stays unknown and is a **launch gate, not a design gate**: it blocks label and launch copy, not this design, and is enforced by [pre-publish-checklist.md](pre-publish-checklist.md) Gate E. Accepted as a pair with [storefront.md](storefront.md). Follow-up (non-blocking): `storefront.md` carries the availability behavior on `availableForSale` but not a separate `availabilitySource` field — reconcile when the partner feed is specced in phase 2.
