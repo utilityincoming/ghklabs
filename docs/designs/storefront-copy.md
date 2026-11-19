@@ -14,6 +14,18 @@ GHK Labs resells a finished cosmetic and ships it by dropship (see [fulfillment-
 
 **Prices are commercial decisions**, resolved here from the suggested catalog in [pricing-and-products.md](pricing-and-products.md). They are draft suggestions, gated on the confidential partner wholesale and confirmed raw COGS, and the principals sign off before publish.
 
+## Authority, on every page that asks for money
+
+Trust is a fact the reader can check, in the same order each time. Marketplace listings in this category put "99%" in the title, file a powder under facial serums, and describe a raw jar as if it were a finished treatment, with no lot file. This draft does the opposite, without naming those listings.
+
+1. **Who sells.** GHK Labs is the seller of record. GHK Labs does not manufacture the serum and does not author the certificate.
+2. **Which lot.** The certificate on a product page is the current released lot, labeled representative, unless a partner feed guarantees the lot in that order. The unit that ships carries its own lot code. That code has a file on the quality index.
+3. **Which number.** A purity or percent figure appears only when it is copied from the label or that lot's certificate. The method sits in the same sentence. There is no "lab-verified" badge.
+4. **Which claim.** Serum pages stay on look and feel. Powder pages stay on identity. A paper stays on the science page, with its evidence class in the same section.
+5. **One ask.** Shop the serum, or read the powder spec. The quality index is a proof link, not a second hero.
+
+SEO titles and descriptions below obey the same five lines. A serum title names the INCI and the label percent. It does not bid on structure, disease, or a study result.
+
 **Size is split.** The **powder** pack weights (1 g, 5 g) are genuinely commercial — GHK Labs buys bulk and repacks — so they are resolved here. The **serum's 30 mL is a target, not a settled fact**: under dropship the finished bottle's net contents is the partner's label figure, so it is confirmed against the partner's actual fill before publish, the same way `{percent}` is shown as "target 1%." Treat every "30 mL" below as "target 30 mL, pending partner fill." The remaining label/COA braces (`{percent}`, `{lot}`, `{purity}`, `{method}`, `{pH}`, `{date}`, per-pack `{net weight}`) stay blank until the label and released COA supply them.
 
 ---
@@ -46,7 +58,13 @@ The first screen sells the serum. It names the ingredient, the look and feel, an
 
 **Secondary link** — See this lot.
 
-**Proof line** — Lot {lot}. Identity by {method}. Purity {purity}. The manufacturer's certificate for that lot — yours to download.
+**Proof line** — Current released lot {lot}, shown here as the representative certificate. Identity by {method}. Purity {purity}, the figure on that file. Download the manufacturer's certificate. The bottle that ships carries its own lot code.
+
+**Authority row**
+
+1. **Seller.** GHK Labs sells the serum. We do not make it, and we do not write the certificate.
+2. **File.** The purity number is the number on the manufacturer's certificate for lot {lot}. If a figure is not on that file, it is not on this page.
+3. **Boundary.** A cosmetic for the look and feel of skin. The papers stay on the science page.
 
 **Three lines**
 
@@ -55,6 +73,8 @@ The first screen sells the serum. It names the ingredient, the look and feel, an
 3. **For the feel.** Skin that feels moisturized.
 
 **Quiet line, below the fold** — A cosmetic for the look and feel of skin. Notes on the published research sit on the science page.
+
+**Metadata** — Title: Copper Tripeptide-1 serum, percent on the label. Description: GHK-Cu in a finished serum from GHK Labs. The current lot's manufacturer certificate is on the page. For the look of fine lines and a moisturized feel.
 
 ---
 
@@ -68,8 +88,9 @@ The first screen sells the serum. It names the ingredient, the look and feel, an
 
 - **What it is for** — the look of fine lines and the feel of moisturized skin. Apply to clean, intact skin, morning or night.
 - **What it is not** — a drug, a wound treatment, or a lesson in how to inject anything.
-- **On this lot** — {lot}, released {date}. {method} identity. {purity}. [Download the manufacturer's COA.]
-- **Shipping** — Sold by GHK Labs, fulfilled and shipped by our fulfillment partner. Lead time {lead_time}. Returns through us.
+- **On this lot** — Representative certificate: lot {lot}, released {date}. {method} identity. {purity}, copied from that file. [Download the manufacturer's COA.] The bottle that ships shows its own lot code. Match that code on the quality index.
+- **The percent** — {percent} is the figure printed on the label. This page repeats it. It does not round it.
+- **Shipping** — Sold by GHK Labs. We do not make the serum. Fulfilled and shipped by our fulfillment partner. Lead time {lead_time}. Returns through us.
 
 **Add to bag.**
 
@@ -99,7 +120,9 @@ Copper Tripeptide-1 is the label name for GHK-Cu, a copper complex of three amin
 
 ### Specs
 
-30 mL. $48. Lot {lot}, released {date}. Identity by {method}. Full INCI on the package, in descending order. Current COA on the lot line.
+30 mL. $48. Representative lot {lot}, released {date}. Identity by {method}. Purity {purity}, same figure as the certificate. Full INCI on the package, in descending order.
+
+**Metadata** — Title: Copper Tripeptide-1 serum, {percent}, lot on the page. Description: 30 mL finished serum sold by GHK Labs. Look of fine lines, moisturized feel. Manufacturer certificate for the current released lot.
 
 ---
 
@@ -123,9 +146,11 @@ If you want the serum, it is here for appearance and feel. If you want the powde
 | Review | A summary of earlier papers. Only as strong as those papers. |
 | This bottle | What we claim for the serum is appearance and feel. The papers are linked beside it, labeled as papers. |
 
-We have not run a finished-product test on this serum. When we do, it gets its own line here, separate from the ingredient research above.
+We have not run a finished-product test on this serum. When we do, it gets its own line here, separate from the ingredient research above. A paper next to a buy button would still be a paper. It does not become what the serum does.
 
 **Close** — Shop the serum. (Formulating instead? The GHK-Cu powder has its own spec page, sold separately.)
+
+**Metadata** — Title: What the GHK-Cu papers measured. Description: Cell, animal, and human results stay in their own rooms. The serum claim is appearance and feel. GHK Labs has not run a finished-product test.
 
 ---
 
@@ -135,7 +160,7 @@ We have not run a finished-product test on this serum. When we do, it gets its o
 
 **GHK-Cu, cosmetic ingredient**
 
-GHK-Cu powder for people who formulate, in two pack weights. Not a finished serum. Not a vial.
+GHK-Cu powder for people who formulate, in two pack weights. Chemical name glycyl-L-histidyl-L-lysine copper. CAS 89030-95-5. On a cosmetic label the INCI name is Copper Tripeptide-1. Not a finished serum. Not a vial. No mix rate on this page.
 
 **Pack weight**
 
@@ -156,19 +181,34 @@ One product, one formula, priced by pack weight only — the 5 g is the formulat
 
 ### About
 
-You are buying the ingredient, identified and weighed. The number on this page matches the certificate for this lot. Storage is whatever that certificate says. There is no mix rate for skin, and no instruction for swallowing or injecting. Confirm the formulator notice before checkout.
+You are buying the ingredient, identified and weighed. GHK Labs sells it. GHK Labs does not author the certificate. The purity on this page is copied from the file for lot {lot}, and the method is named beside it. A purity percent in a title, with no file, is not a number we print. Storage is whatever that certificate says. There is no mix rate for skin, and no instruction for swallowing or injecting. A finished serum is a separate product. Confirm the formulator notice before checkout.
 
 ### Specs
 
-1 g — $34 · 5 g — $119. Net weight {net weight} for the selected pack. Lot {lot}. {method}. {purity}.
+1 g — $34 · 5 g — $119. Net weight {net weight} for the selected pack. Lot {lot}. {method}. {purity}, the figure on that certificate.
 
 **Read the powder spec.**
+
+**Metadata** — Title: GHK-Cu powder, cosmetic ingredient, lot certificate. Description: 1 g and 5 g of GHK-Cu for formulators. Identity, purity, and net weight match the manufacturer certificate. Not a finished serum.
 
 ---
 
 ## Quality
 
-Each released lot carries the manufacturer's certificate. If a number is not on that COA, it is not on this page. The method sits beside every purity figure. A recalled lot stays listed, with the recall in the first line, and it is not attached to a buy button.
+**Eyebrow** — The file, not a badge.
+
+**Opening** — Each released lot carries the manufacturer's certificate. GHK Labs hosts the file and records its hash. We did not run the test, and we do not rewrite the result. If a number is not on that certificate, it is not on this page. The method sits beside every purity figure.
+
+**How to read the file**
+
+1. **Lot code.** It matches the code on the unit, or the page says the certificate is the current released lot and is representative.
+2. **Identity.** The method named on the certificate is the method named on the page.
+3. **Purity.** One figure, the same characters as the file. We do not round it and we do not add a slogan in front of it.
+4. **Hash.** A replaced file changes the recorded hash. The old link is not quietly reused.
+
+A recalled lot stays listed, with the recall in the first line, and it is not attached to a buy button.
+
+**Metadata** — Title: Lot certificates for GHK Labs. Description: Manufacturer certificates for released lots. Purity and identity match the file. A recalled lot stays listed and cannot be bought.
 
 ## Shipping & who you buy from
 
@@ -179,6 +219,8 @@ GHK Labs is the seller. Your order is fulfilled and shipped by our fulfillment p
 ## Microcopy
 
 - **COA link** — Download the manufacturer's COA · lot {lot}
+- **Representative lot** — Certificate shown is the current released lot. The unit that ships carries its own code.
+- **Purity** — {purity} by {method}. Same figure as the file.
 - **Patch-test reminder** — New to copper peptides? Patch-test the inner forearm first.
 - **Out-of-stock** — This lot sold through. The next lot ships with its own COA.
 - **Recall banner** — Recalled: lot {lot}. Do not use. [What happened.]
@@ -229,4 +271,4 @@ Naming a legal entity, writing the claim sheet, inventing concentrations, and tr
 
 ## Acceptance
 
-**Accepted 2026-11-19**, alongside accepted [storefront.md](storefront.md), [fulfillment-model.md](fulfillment-model.md), and [brand-voice.md](brand-voice.md). The copy is publish-ready: prices resolve from the accepted [pricing-and-products.md](pricing-and-products.md) and are draft suggestions gated on the confidential partner wholesale and confirmed raw COGS, with principal sign-off before publish. Every remaining `{brace}` (`{percent}`, `{lot}`, `{purity}`, `{method}`, `{pH}`, `{date}`, per-pack `{net weight}`, serum net contents, `{entity}`, `{address}`, `{support_email}`, and the partner's `{lead_time}` / `{return_window}` / RMA figures) is a **launch gate, not a design gate**, and stays blank on the live page until its source document exists — enforced by [pre-publish-checklist.md](pre-publish-checklist.md) Gate A. Public display name "GHK Labs" is provisional pending [storefront.md](storefront.md) Q9.
+**Accepted 2026-11-19**, revised the same day to put the authority order into the page copy: seller versus laboratory, representative lot, purity copied from the file, and metadata that stays inside the claim class. Alongside accepted [storefront.md](storefront.md), [fulfillment-model.md](fulfillment-model.md), and [brand-voice.md](brand-voice.md). The copy is publish-ready: prices resolve from the accepted [pricing-and-products.md](pricing-and-products.md) and are draft suggestions gated on the confidential partner wholesale and confirmed raw COGS, with principal sign-off before publish. Every remaining `{brace}` (`{percent}`, `{lot}`, `{purity}`, `{method}`, `{pH}`, `{date}`, per-pack `{net weight}`, serum net contents, `{entity}`, `{address}`, `{support_email}`, and the partner's `{lead_time}` / `{return_window}` / RMA figures) is a **launch gate, not a design gate**, and stays blank on the live page until its source document exists — enforced by [pre-publish-checklist.md](pre-publish-checklist.md) Gate A. Public display name "GHK Labs" is provisional pending [storefront.md](storefront.md) Q9.
