@@ -6,6 +6,8 @@ Publish-ready copy for the cosmetic copper-peptide storefront in [storefront.md]
 
 This is copy, not legal advice. Counsel signs the claim sheet before a page ships. Claim class is `cosmetic_appearance` for the serum and home pages, and `identity_only` for the raw powder.
 
+GHK Labs resells a finished cosmetic and ships it by dropship (see [fulfillment-model.md](fulfillment-model.md)). So the copy attributes the COA to the manufacturer, never to an in-house lab, and is truthful about third-party fulfillment. The supply partner is not named on any consumer surface.
+
 `{braces}` are facts we do not invent — concentration, lot, purity, method, price, size, pH, date. They come from the label and the released COA before publish, and stay blank on the live page until that number exists. Banned on product pages: *heal, repair, recover, reverse, stimulate/boost collagen, DNA, gene, inflammation, wound, hair growth, clinical proof, proven, doctor-recommended, biohack (verb), research use only, injectable, subcutaneous, reconstitute, dose, protocol.* Science pages may name those words to explain why a paper does not transfer; they do not then attach them to the SKU.
 
 ---
@@ -22,7 +24,7 @@ This is copy, not legal advice. Counsel signs the claim sheet before a page ship
 
 **Secondary link** — Read what the papers actually measured.
 
-**Proof line (under the fold)** — Current lot {lot}. Identity by {method}. Purity {purity} on the COA. Same file you can download.
+**Proof line (under the fold)** — Current lot {lot}. Identity by {method}. Purity {purity} on the manufacturer's COA. The same certificate you can download.
 
 **The three-step trust strip** *(one inspectable fact before any adjective)*
 
@@ -42,7 +44,8 @@ This is copy, not legal advice. Counsel signs the claim sheet before a page ship
 
 - **What it is for** — the look of fine lines and the feel of moisturized skin. Apply to clean, intact skin, morning or night, then a moisturizer if you want one.
 - **What it is not** — a drug, a wound treatment, or a lesson in how to inject anything.
-- **On this lot** — {lot}, released {date}. {method} identity. {purity}. [Download the COA.]
+- **On this lot** — {lot}, released {date}. {method} identity. {purity}. [Download the manufacturer's COA.]
+- **Shipping** — Sold by GHK Labs, fulfilled and shipped by our fulfillment partner. Lead time {lead_time}. Returns through us.
 
 **Add to bag.**
 
@@ -132,17 +135,23 @@ You are buying the ingredient, identified and weighed. The number on this page m
 
 ## Quality
 
-We publish the lot that is on the unit you can buy. If a number is not on that COA, it is not on this page. The method sits beside every purity figure. A recalled lot stays listed, with the recall in the first line, and it is not attached to a buy button.
+Each released lot carries the manufacturer's certificate. If a number is not on that COA, it is not on this page. The method sits beside every purity figure. A recalled lot stays listed, with the recall in the first line, and it is not attached to a buy button.
+
+## Shipping & who you buy from
+
+GHK Labs is the seller. Your order is fulfilled and shipped by our fulfillment partner, so delivery runs on their lead time, not a same-day promise. Returns and support go through us, at {support_email}. {return_window} to start a return.
 
 ---
 
 ## Microcopy
 
-- **COA link** — Download the COA · lot {lot}
+- **COA link** — Download the manufacturer's COA · lot {lot}
 - **Patch-test reminder** — New to copper peptides? Patch-test the inner forearm first.
 - **Out-of-stock** — This lot sold through. The next lot ships with its own COA.
 - **Recall banner** — Recalled: lot {lot}. Do not use. [What happened.]
 - **Cart note** — Cosmetic for appearance and feel. Not a drug.
+- **Ships-from note** — Sold by GHK Labs. Fulfilled and shipped by our fulfillment partner.
+- **Disclosure slot (reserved)** — Rendered only if the sourcing posture is affiliate rather than reseller. Generic by design, names no partner. Draft: "We may earn a commission on this purchase." Leave unrendered under the merchant-of-record model (see fulfillment-model.md, Q1).
 - **Formulator checkbox** — I am buying GHK-Cu as a cosmetic ingredient to formulate. It is not a finished product to swallow, inject, or apply as sold.
 
 ## Out of scope
