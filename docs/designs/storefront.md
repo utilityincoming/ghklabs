@@ -252,7 +252,7 @@ Decisions below change the spec. Defaults in this draft are what implementation 
 6. **Accounts.** Shopify customer accounts (default) versus a later custom account on top of Shopify.
 7. **Subscriptions.** Confirm they wait until phase 2. Default: yes.
 8. **Wholesale.** Same. Default: phase 3, not a second site.
-9. **Brand name and visual reference.** Working name is ghklabs. Default look: light, editorial skincare, not a lab catalog. A reference site would lock the next design (visual UI).
+9. **Brand name and visual reference.** Working name is ghklabs. Default look: light, editorial skincare, not a lab catalog. A reference site would lock the next design (visual UI). Draft voice and the competitor read live in [brand-voice.md](brand-voice.md).
 10. **Age gate.** Default: no popup gate; no marketing to minors; terms say products are for adults.
 11. **Counsel.** Name who signs the claim sheet before a PDP or article can be published. Unknown.
 
