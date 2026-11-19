@@ -69,17 +69,27 @@ Placeholders in braces are facts we do not invent: concentration, lot, purity, m
 
 ### Home hero
 
-Eyebrow: Copper Tripeptide-1, for skin.
+The first screen sells the serum. It names the ingredient, the look and feel, and the lot. It does not open on what the bottle refuses to be, and it does not send the reader to a paper before the shop. Category and research notes sit one section down, in a calm line, with a link.
 
-Headline: A blue serum with the peptide named, the percent printed, and the lot on the glass.
+Eyebrow: Copper Tripeptide-1 serum
 
-Deck: GHK-Cu is a small copper complex people have studied for decades. Those studies are not the same thing as a bottle. Ours is a cosmetic for the look and feel of skin: softer-looking texture, a moisturized feel, nothing that pretends to treat a condition.
+Headline: Softer-looking texture. Skin that feels moisturized.
+
+Deck: GHK-Cu in a finished serum. The percent is printed. The lot is on the glass. A few drops, morning and evening.
+
+Three lines:
+
+- Copper Tripeptide-1 at {percent}, named on the label.
+- For the look of fine lines and a softer-looking texture.
+- A moisturized feel. Then a moisturizer if you want one.
 
 Primary: Shop the serum.
 
-Secondary: Read what the papers actually measured.
+Secondary: See this lot.
 
-Proof line under the fold: Current lot {lot}. Identity by {method}. Purity {purity} on the COA. Same file you can download.
+Proof line: Lot {lot}. Identity by {method}. Purity {purity}. The certificate is the file for that lot.
+
+Below the fold, one quiet line: A cosmetic for the look and feel of skin. Notes on the published research sit on the science page.
 
 ### Serum PDP, above the fold
 
@@ -115,7 +125,7 @@ Use this order on home, PDP, and the pillar. Skip a step only when the page is n
 
 1. Say the category in the first screen: cosmetic serum, or formulator ingredient.
 2. Give one inspectable fact (stated percent, lot, or method) before any adjective about skin.
-3. Put the evidence boundary in the same view as any mention of research. One sentence is enough on a PDP. The pillar can go long.
+3. On the homepage, do not mention research in the hero. If a later section names a paper, keep the evidence class in that same section. On a PDP, one sentence is enough. The pillar can go long.
 4. Make the COA a link with the lot code visible, not a badge that says “lab tested.”
 5. Ask once, with a verb that matches the product: “Shop the serum” or “Read the powder spec.” Do not offer both as equal heroes.
 
