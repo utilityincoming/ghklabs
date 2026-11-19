@@ -1,6 +1,6 @@
 # Pre-publish checklist
 
-Status: draft
+Status: accepted
 
 The gate a human signs before any storefront page, SKU, or lot goes live. It exists because the house is a **reseller of a cosmetic** (see [fulfillment-model.md](fulfillment-model.md)): we own every claim and every number we publish even though we do not make or test the goods. This is a working checklist, not legal advice. Counsel signs the claim sheet; this list is what the operator confirms before asking counsel and before publish.
 
@@ -86,3 +86,7 @@ Gates A–F pass:          ☐ yes   ☐ blocked (reason: __________)
 ## Out of scope
 
 Being the claim sheet itself, naming the legal entity or responsible person, and the payment underwriting decision. Those are counsel's and the operator's; this list only makes sure they were done before publish.
+
+## Acceptance
+
+**Accepted 2026-11-19.** The gate is complete and has no open questions. It is the enforcement point for the launch-blocking items deferred from the other accepted storefront designs: facts/braces (Gate A), claim discipline and the banned-word list (Gates B and F), reseller integrity and COA provenance (Gate C), lot/COA (Gate D), and MoCRA responsible person, entity, and payment posture (Gate E). No storefront page, SKU, or lot publishes until a human signs Gates A–F for that unit.

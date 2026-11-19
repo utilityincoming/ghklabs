@@ -1,6 +1,6 @@
 # Copper peptide storefront
 
-Status: draft
+Status: accepted
 
 This is the product specification for the public ghklabs shop. It is not an accepted design and it is not legal advice. A cosmetics regulatory counsel and a payments underwriter should review the claims, labeling, and raw-material offer before launch.
 
@@ -277,3 +277,5 @@ Sourcing posture is **decided: reseller / merchant of record** ([fulfillment-mod
 ## Acceptance
 
 Accept this document only after questions 1–5 are answered or the defaults are explicitly kept, and alongside an accepted [fulfillment-model.md](fulfillment-model.md) (its questions 2–3 and 8). Implementation of the storefront waits on an accepted revision.
+
+**Accepted 2026-11-19**, alongside an accepted [fulfillment-model.md](fulfillment-model.md). Q1 (consumers first, formulators as a secondary catalog), Q2 (cosmetic ingredient, no research-only branding), Q3 (build both templates; enable powder checkout only after the processor accepts it), and Q4 (US shipping only) defaults explicitly kept. Q6–Q10 defaults kept. Q5 (legal entity, responsible person, address) and Q11 (counsel sign-off) stay unknown and are **launch gates, not design gates** — they block launch copy and publish, not this design, and are enforced by [pre-publish-checklist.md](pre-publish-checklist.md) (Gates A and E). Q9 brand name remains "ghklabs" as the working name; [storefront-copy.md](storefront-copy.md) uses "GHK Labs" as the provisional public spelling. Lock one form before publish. Implementation may proceed against these defaults; nothing publishes until the braces fill and the checklist signs off.

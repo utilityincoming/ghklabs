@@ -1,6 +1,6 @@
 # Brand voice
 
-Status: draft
+Status: accepted
 
 This is the voice for the first public copy on the cosmetic storefront in [storefront.md](storefront.md). It does not change the webhook API or the delivery marketing page. It is not legal advice. Counsel still signs the claim sheet before a page ships.
 
@@ -200,3 +200,7 @@ Read the powder spec.
 ## Out of scope
 
 Naming a legal entity, writing the claim sheet, inventing concentrations, and translating this voice into ads. Ads later use the same banned-word list. This draft does not accept the storefront; question 9 there (brand name and visual reference) can point at this voice without closing the other open questions.
+
+## Acceptance
+
+**Accepted 2026-11-19.** The voice spec is complete and has no design-blocking open questions. The working public name stays "ghklabs"; [storefront-copy.md](storefront-copy.md) uses "GHK Labs" as the provisional public spelling pending [storefront.md](storefront.md) Q9. The banned-word list and claim-class discipline here are enforced at publish by [pre-publish-checklist.md](pre-publish-checklist.md) (Gates B and F).

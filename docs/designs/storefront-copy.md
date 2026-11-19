@@ -1,6 +1,6 @@
 # Storefront copy
 
-Status: draft
+Status: accepted
 
 Publish-ready copy for the cosmetic copper-peptide storefront in [storefront.md](storefront.md), written in the voice set in [brand-voice.md](brand-voice.md): *friendly professional biologic hacker salesman* — friend, professional, biologic hacker, salesman, in that order, on every page that asks for money or belief.
 
@@ -226,3 +226,7 @@ Use on clean, intact skin. Patch-test first. If redness, burning, itching, or bl
 ## Out of scope
 
 Naming a legal entity, writing the claim sheet, inventing concentrations, and translating this voice into ads. Ads later reuse the same banned-word list. This copy does not accept the storefront; it fills the voice that storefront question 9 points at.
+
+## Acceptance
+
+**Accepted 2026-11-19**, alongside accepted [storefront.md](storefront.md), [fulfillment-model.md](fulfillment-model.md), and [brand-voice.md](brand-voice.md). The copy is publish-ready: prices resolve from the accepted [pricing-and-products.md](pricing-and-products.md) and are draft suggestions gated on the confidential partner wholesale and confirmed raw COGS, with principal sign-off before publish. Every remaining `{brace}` (`{percent}`, `{lot}`, `{purity}`, `{method}`, `{pH}`, `{date}`, per-pack `{net weight}`, serum net contents, `{entity}`, `{address}`, `{support_email}`, and the partner's `{lead_time}` / `{return_window}` / RMA figures) is a **launch gate, not a design gate**, and stays blank on the live page until its source document exists — enforced by [pre-publish-checklist.md](pre-publish-checklist.md) Gate A. Public display name "GHK Labs" is provisional pending [storefront.md](storefront.md) Q9.
