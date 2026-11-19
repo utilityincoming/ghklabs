@@ -1,6 +1,6 @@
 # Design index
 
-Index of Elephant-Goldfish design artifacts for ghklabs. Add a row when a design is accepted.
+Index of Elephant-Goldfish design artifacts for ghklabs. Add a row when a design is added or its status changes.
 
 | Document | Status | Summary |
 | --- | --- | --- |
@@ -12,3 +12,4 @@ Index of Elephant-Goldfish design artifacts for ghklabs. Add a row when a design
 | [fulfillment-model.md](fulfillment-model.md) | accepted | Dropship reseller / merchant-of-record model: COA provenance, inventory, shipping, and consumer disclosure deltas against the storefront spec. Supply partner kept unnamed. |
 | [pre-publish-checklist.md](pre-publish-checklist.md) | accepted | The signed gate before any page, SKU, or lot goes live: facts filled, claim discipline, reseller integrity, COA/lot, compliance, and mechanics. |
 | [pricing-and-products.md](pricing-and-products.md) | accepted | Focused catalog (one serum, two powder pack-weights) with raw-material price landscape, two-cost-model margin analysis (dropship serum vs. resold powder), and a premium-but-fair retail ladder. Prices suggested, gated on confidential partner wholesale and confirmed COGS. |
+| [ghk-cu-history.md](ghk-cu-history.md) | draft | Journal article `/journal/ghk-cu-history`: GHK-Cu from the 1973 plasma fraction through the 1998–2001 cosmetic launches to the 2018 price drop, with evidence class kept on each room. |
