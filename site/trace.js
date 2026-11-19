@@ -1,9 +1,9 @@
 const steps = [
-  { state: "pending", tone: "", line: "Waiting for the first attempt.", fill: 8, note: "Row written for endpoint lab." },
-  { state: "attempt", tone: "", line: "POST is in flight.", fill: 36, note: "Claimed for 30s so a second drainer skips it." },
-  { state: "retry", tone: "", line: "Endpoint timed out. Backoff scheduled.", fill: 58, note: "Still pending. Attempt 1 of 5." },
-  { state: "delivered", tone: "ok", line: "The endpoint accepted the body.", fill: 100, note: "Signed header checked against the raw body." },
-  { state: "failed", tone: "bad", line: "Five attempts. This delivery stops.", fill: 100, note: "A later event starts a new row." }
+  { state: "molecule", tone: "", line: "Three amino acids plus copper.", fill: 12, note: "Copper Tripeptide-1 on a cosmetic label. GHK-Cu when identity is the point." },
+  { state: "cells", tone: "", line: "Maquart et al., 1988 — more collagen synthesis.", fill: 40, note: "Measured in cultured fibroblasts. A cell result, not a result on a face." },
+  { state: "people", tone: "", line: "A later human study, small and mixed.", fill: 64, note: "Set after laser resurfacing. Satisfaction moved; several blinded measures did not." },
+  { state: "this serum", tone: "ok", line: "What this bottle claims.", fill: 100, note: "The look of fine lines, the feel of moisturized skin. Nothing more." },
+  { state: "not a drug", tone: "bad", line: "Where the serum stops.", fill: 100, note: "Not a treatment, a wound product, or a dose. Those stay on the paper, labeled as papers." }
 ];
 
 const legend = document.getElementById("legend");
