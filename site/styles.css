@@ -99,7 +99,27 @@ h2 {
 }
 .signature span { color: var(--ink-blue); }
 .sig-note { margin: 0; color: var(--muted); }
-.hero { padding: 4.5rem 0 2rem; }
+.hero {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.85fr) 1.15fr;
+  gap: 2.4rem;
+  align-items: end;
+  padding: 2.5rem 0 2rem;
+}
+.pack { margin: 0; }
+.pack img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  background: #fff;
+}
+.pack figcaption {
+  margin: 0.55rem 0 0;
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 0.78rem;
+}
 .hero-actions { display: flex; gap: 1.2rem; align-items: center; margin: 1.6rem 0 2.2rem; }
 .textlink { color: var(--ink-blue); }
 .facts {
@@ -207,7 +227,7 @@ footer {
 
 @media (max-width: 800px) {
   .top nav { display: none; }
-  .facts, .stage, .split, .grid { grid-template-columns: 1fr; }
+  .hero, .facts, .stage, .split, .grid { grid-template-columns: 1fr; }
   .facts div { border-top: 1px solid var(--line); padding: 0.7rem 0; }
   .facts { border-top: 0; }
   h1 { font-size: 3rem; }

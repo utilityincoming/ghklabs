@@ -4,6 +4,7 @@
     { "source": "/styles.css", "destination": "/site/styles.css" },
     { "source": "/trace.js", "destination": "/site/trace.js" },
     { "source": "/favicon.svg", "destination": "/site/favicon.svg" },
+    { "source": "/media/(.*)", "destination": "/site/media/$1" },
     { "source": "/v1/(.*)", "destination": "/api" },
     { "source": "/healthz", "destination": "/api" }
   ],

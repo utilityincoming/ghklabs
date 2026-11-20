@@ -2,6 +2,8 @@
 
 Status: accepted
 
+The live page at `/` leads with the serum story from [storefront-copy.md](storefront-copy.md), including a generic unbranded bottle ([label-truth-up.md](label-truth-up.md) §2.3). The sections below still describe the original webhook page. That walkthrough is not what `site/index.html` renders.
+
 ## Problem
 
 The repository documents an outbound webhook API and ships a Go server. There is no public page that states what the product does, how a delivery moves, or which calls to make first.
