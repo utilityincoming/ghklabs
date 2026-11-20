@@ -1,8 +1,8 @@
 # GHK-Cu history (journal draft)
 
-Status: draft
+Status: draft, off the launch path
 
-A journal article for `/journal/ghk-cu-history`. It explains how Copper Tripeptide-1 went from a plasma fraction to a routine serum, and why the name got louder than the evidence. Voice is [brand-voice.md](brand-voice.md). Claim class is literature, not `cosmetic_appearance`. The serum ask is one line at the end. This page does not change the science pillar in [storefront-copy.md](storefront-copy.md). That pillar still holds the evidence rooms. This one holds the timeline.
+A journal article for `/journal/ghk-cu-history`. It is not a launch page. The launch storefront ships without `/journal`. It explains how Copper Tripeptide-1 went from a plasma fraction to a routine serum, and why the name got louder than the evidence. Voice is [brand-voice.md](brand-voice.md). Claim class is literature, not `cosmetic_appearance`. The serum ask is one line at the end. This page does not change the science pillar in [storefront-copy.md](storefront-copy.md). That pillar still holds the evidence rooms. This one holds the timeline.
 
 No injection steps, no mixing rates, no personal protocol. Words such as collagen, wound, and injectable appear only as labels on what a paper or a market actually was.
 

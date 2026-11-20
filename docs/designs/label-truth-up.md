@@ -28,8 +28,8 @@ What the prototype settles is **brand-level**, not SKU-level:
 
 | Label fact | What it can resolve | What it must not do |
 | --- | --- | --- |
-| "Distributed by Cuivelle LLC, 6501 Congress Ave, Boca Raton, FL 33487" | Candidate for `{entity}` / `{address}` and the Q9 display name | Be assumed to be the *supply partner* (which must stay unnamed) |
-| "CopperPeptides.com" | Candidate public brand / `{support_email}` domain | Be published before Q9 is locked |
+| "Distributed by Cuivelle LLC, 6501 Congress Ave, Boca Raton, FL 33487" | Nothing on our surfaces. Principal answer: this is the supply partner | Be published as `{entity}`, `{address}`, or a display name |
+| "CopperPeptides.com" | Nothing on our surfaces. It rides with the partner's label | Be used as our brand or `{support_email}` domain |
 | "AFTER OPENING: 6M" | A shelf-life model the storefront has no field for | Be confused with a release date or an expiry date |
 
 ## Part 2 — Identity & entity
@@ -58,28 +58,25 @@ These cannot both be acted on. Which is true is a fact the principals hold (who
 owns Cuivelle, who owns the domain, whose product the prototype is), not something
 this doc can infer from the label alone.
 
-### 2.2 Proposed resolution (pending that answer)
+### 2.2 Resolution (Reading B)
 
-- **If Reading A:** lock Q9 to the "Copper Peptides" brand, fill `{entity}` /
-  `{address}` / `{support_email}` from the label, and update
-  [storefront.md](storefront.md) Q9/Q5, [storefront-copy.md](storefront-copy.md)
-  (replace the provisional "GHK Labs" spelling), and the Gate A entity rows —
-  all in one later change, after counsel confirms the MoCRA responsible person
-  (Gate E) lines up with the same entity.
-- **If Reading B:** the prototype's distributor line is the **partner's**, Cuivelle
-  stays unnamed on our surfaces, and this doc's only output is to *not* publish it.
-  Q9 and `{entity}` remain open.
+**Decided 2026-11-19.** Cuivelle LLC is the unnamed supply partner. Reading A is
+closed. The distributor line, the Boca Raton address, and CopperPeptides.com stay
+off every ghklabs surface: pages, metadata, alt text, structured data, and
+image files. Our `{entity}`, `{address}`, and `{support_email}` stay blank.
+Q9 stays open: the public name is **TBD**. "ghklabs" remains the working name and
+"GHK Labs" the provisional public spelling until a name is chosen. Do not treat
+the provisional spelling as the trade name.
 
-**No accepted doc is edited until the fork is answered.** Until then, Q9 stays at
-its accepted default ("ghklabs" working name, "GHK Labs" provisional public
-spelling) and `{entity}`/`{address}` stay blank — a launch gate, not a design gate.
+### 2.3 Product images while the name is open
 
-### 2.3 Open question
-
-**Q-ID1.** Which party is Cuivelle LLC — our merchant-of-record entity (Reading A)
-or the unnamed supply partner (Reading B)? Who owns CopperPeptides.com, and is the
-prototype our own-brand unit or the partner's? Principal answer; blocks any entity/
-display-name fill.
+The story still needs a picture. Use **generic product images**: a plain bottle,
+dropper, or powder jar on a light editorial ground, in the calm skincare look
+from [storefront.md](storefront.md). No wordmark, no partner name, no
+CopperPeptides.com, no distributor address, no "precision dosing" line, and no
+before/after. Alt text names the INCI and the format ("Copper Tripeptide-1
+serum bottle"), not a brand. These images are stand-ins. They are replaced when
+Q9 locks and a real pack shot exists that does not show the partner.
 
 ## Part 3 — Integrity pass
 
@@ -144,8 +141,7 @@ label + COA), and the concentrate's own positioning/price (that is
 
 ## 5. Open questions
 
-1. **Q-ID1 (§2.3).** Which party is Cuivelle LLC, and who owns CopperPeptides.com?
-   Blocks all entity/display-name work.
+1. **Q-ID1 is answered (§2.2).** Reading B. The public name (Q9) is still TBD.
 2. **Does every SKU label carry a PAO**, and is 6M the house default or
    per-product? Confirms the `{pao}` field's source and whether it is one value or
    per-label (§3.1).
@@ -155,5 +151,5 @@ label + COA), and the concentrate's own positioning/price (that is
 Not accepted. Draft for review. On acceptance:
 - §3.1 and §3.3 are edits to [pre-publish-checklist.md](pre-publish-checklist.md)
   and [storefront-copy.md](storefront-copy.md), made in that accepting change.
-- §2 makes **no** edit until Q-ID1 is answered; it only records the candidate and
-  the fork.
+- §2.2 is already decided: no accepted doc gains the partner's name, domain, or
+  address. Q9 and `{entity}` stay open.

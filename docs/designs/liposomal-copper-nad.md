@@ -1,6 +1,6 @@
 # Liposomal copper peptides, then a NAD+ experiment
 
-Status: draft
+Status: draft, off the launch path
 
 Groundwork for two unfinished cosmetics. Neither is a SKU, a price, or a page in the launch storefront. The launch catalog stays the one in [pricing-and-products.md](pricing-and-products.md): one Copper Tripeptide-1 serum and two GHK-Cu powder packs. This draft does not change the reseller decision in [storefront.md](storefront.md) or the claim rules in [brand-voice.md](brand-voice.md). It is not a formula, a process, or legal advice.
 
