@@ -114,7 +114,7 @@ Shopify is the system of record for money and stock. The storefront reads a narr
 | `shortDescription` | One sentence, appearance or identity only. |
 | `description` | Long copy, reviewed. |
 | `usage` | Cosmetics: topical application steps. Raw: storage and handling for formulation. Empty for use-on-the-body of raw powder. |
-| `heroMedia` | Images. No before/after medical imagery in the MVP. |
+| `heroMedia` | Images. No before/after medical imagery in the MVP. While Q9 is open, use a generic unbranded pack shot (plain bottle, dropper, or jar; no wordmark and no supply-partner mark). See [label-truth-up.md](label-truth-up.md) §2.3. |
 | `seo` | Title and description that obey the same claim class. |
 
 ### Variant
@@ -270,7 +270,7 @@ Sourcing posture is **decided: reseller / merchant of record** ([fulfillment-mod
 6. **Accounts.** Shopify customer accounts (default) versus a later custom account on top of Shopify.
 7. **Subscriptions.** Confirm they wait until phase 2. Default: yes.
 8. **Wholesale.** Same. Default: phase 3, not a second site.
-9. **Brand name and visual reference.** Working name is ghklabs. Default look: light, editorial skincare, not a lab catalog. A reference site would lock the next design (visual UI). Draft voice and the competitor read live in [brand-voice.md](brand-voice.md).
+9. **Brand name and visual reference.** Working name is ghklabs. The public name is TBD (principal, 2026-11-19); "GHK Labs" stays a provisional spelling, not a trade name. Default look: light, editorial skincare, not a lab catalog. Product images are generic and unbranded until that name and a real pack shot exist ([label-truth-up.md](label-truth-up.md) §2.3). The distributor printed on the prototype label is the supply partner and is never published. Draft voice and the competitor read live in [brand-voice.md](brand-voice.md).
 10. **Age gate.** Default: no popup gate; no marketing to minors; terms say products are for adults.
 11. **Counsel.** Name who signs the claim sheet before a PDP or article can be published. Unknown.
 
@@ -278,4 +278,4 @@ Sourcing posture is **decided: reseller / merchant of record** ([fulfillment-mod
 
 Accept this document only after questions 1–5 are answered or the defaults are explicitly kept, and alongside an accepted [fulfillment-model.md](fulfillment-model.md) (its questions 2–3 and 8). Implementation of the storefront waits on an accepted revision.
 
-**Accepted 2026-11-19**, alongside an accepted [fulfillment-model.md](fulfillment-model.md). Q1 (consumers first, formulators as a secondary catalog), Q2 (cosmetic ingredient, no research-only branding), Q3 (build both templates; enable powder checkout only after the processor accepts it), and Q4 (US shipping only) defaults explicitly kept. Q6–Q10 defaults kept. Q5 (legal entity, responsible person, address) and Q11 (counsel sign-off) stay unknown and are **launch gates, not design gates** — they block launch copy and publish, not this design, and are enforced by [pre-publish-checklist.md](pre-publish-checklist.md) (Gates A and E). Q9 brand name remains "ghklabs" as the working name; [storefront-copy.md](storefront-copy.md) uses "GHK Labs" as the provisional public spelling. Lock one form before publish. Implementation may proceed against these defaults; nothing publishes until the braces fill and the checklist signs off.
+**Accepted 2026-11-19**, alongside an accepted [fulfillment-model.md](fulfillment-model.md). Q1 (consumers first, formulators as a secondary catalog), Q2 (cosmetic ingredient, no research-only branding), Q3 (build both templates; enable powder checkout only after the processor accepts it), and Q4 (US shipping only) defaults explicitly kept. Q6–Q10 defaults kept. Q5 (legal entity, responsible person, address) and Q11 (counsel sign-off) stay unknown and are **launch gates, not design gates** — they block launch copy and publish, not this design, and are enforced by [pre-publish-checklist.md](pre-publish-checklist.md) (Gates A and E). Q9 brand name remains "ghklabs" as the working name; [storefront-copy.md](storefront-copy.md) uses "GHK Labs" as the provisional public spelling. Principal confirmed 2026-11-19 that the public name is still TBD, and that the prototype label's distributor is the supply partner and must not be published ([label-truth-up.md](label-truth-up.md) §2.2). Lock one public name before publish. Implementation may proceed against these defaults; nothing publishes until the braces fill and the checklist signs off.
