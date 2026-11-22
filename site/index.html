@@ -20,10 +20,10 @@
   <header class="top">
     <a class="mark" href="#top">GHK<span>Labs</span></a>
     <nav>
-      <a href="#peptide">The peptide</a>
       <a href="#serum">Serum</a>
-      <a href="#verify">Verify</a>
-      <a href="#quality">Quality</a>
+      <a href="/science">Science</a>
+      <a href="/quality">Quality</a>
+      <a href="/raw">Powder</a>
     </nav>
     <a class="pill" href="#serum">Shop the serum</a>
   </header>
@@ -38,17 +38,17 @@
       <p class="kicker">Copper Tripeptide-1 serum</p>
       <h1>Softer-looking skin, with the peptide named and the lot on the glass.</h1>
       <p class="lede">GHK-Cu in a finished serum. The percent is printed on the label. A few drops, morning and evening.</p>
-      <p class="signature"><span>On this lot:</span> {lot} · {method} · {purity}</p>
-      <p class="sig-note">The manufacturer's certificate for that lot — yours to download.</p>
+      <p class="signature"><span>On this lot:</span> the certificate appears when a lot is released.</p>
+      <p class="sig-note">It will be the manufacturer's file. The method and the purity will be the figures on that file.</p>
       <div class="hero-actions">
         <a class="pill solid" href="#serum">Shop the serum</a>
         <a class="textlink" href="#verify">See this lot</a>
       </div>
       <dl class="facts">
         <div><dt>Peptide</dt><dd>Copper Tripeptide-1</dd></div>
-        <div><dt>On the label</dt><dd>{percent}</dd></div>
+        <div><dt>On the label</dt><dd>The printed percent</dd></div>
         <div><dt>Feel</dt><dd>Moisturized skin</dd></div>
-        <div><dt>Lot</dt><dd>{lot}</dd></div>
+        <div><dt>Lot</dt><dd>When a lot is released</dd></div>
       </dl>
       </div>
     </section>
@@ -82,21 +82,21 @@
           <header><span>01</span><h3>The peptide</h3></header>
           <p>Copper Tripeptide-1 is the INCI name for GHK-Cu. It is the one hero ingredient on this page, named in plain words.</p>
           <pre><code id="code-register">Copper Tripeptide-1 (GHK-Cu)
-water-based serum, {size}</code></pre>
+water-based serum. Size is the figure on the label.</code></pre>
           <button type="button" data-copy="code-register">Copy the INCI name</button>
         </article>
         <article>
           <header><span>02</span><h3>The percent</h3></header>
           <p>The stated concentration is on the label, in descending-order INCI. We print the figure; we do not round it up into an adjective.</p>
-          <pre><code id="code-publish">Copper Tripeptide-1 at {percent}
-pH {range}, once the formula sheet says so</code></pre>
+          <pre><code id="code-publish">Copper Tripeptide-1, the percent on the label.
+pH, once the formula sheet says so.</code></pre>
           <button type="button" data-copy="code-publish">Copy the spec line</button>
         </article>
         <article>
           <header><span>03</span><h3>The lot</h3></header>
           <p>Each unit carries its lot and release date. The number on this page matches the certificate for that lot, and no other.</p>
-          <pre><code id="code-lot">Lot {lot}, released {date}
-identity by {method} · purity {purity}</code></pre>
+          <pre><code id="code-lot">Lot, release date, method, and purity
+are copied from the manufacturer's certificate.</code></pre>
           <button type="button" data-copy="code-lot">Copy the lot line</button>
         </article>
       </div>
@@ -106,13 +106,13 @@ identity by {method} · purity {purity}</code></pre>
       <div>
         <p class="kicker">Verify</p>
         <h2>The certificate matches the lot on the glass.</h2>
-        <p>The manufacturer's certificate names the method and the figure: identity by <span class="mono">{method}</span>, purity <span class="mono">{purity}</span>, for lot <span class="mono">{lot}</span>. Download that file. It is the certificate for the lot you can buy.</p>
+        <p>The manufacturer's certificate names the method and the figure. Download that file when a lot is released. The page repeats those characters. It does not round them.</p>
       </div>
       <figure>
         <figcaption>Certificate of analysis</figcaption>
-        <pre>lot      {lot}
-identity {method}
-purity   {purity}</pre>
+        <pre>lot      when released
+identity the method on the file
+purity   the figure on the file</pre>
       </figure>
     </section>
 
@@ -144,7 +144,7 @@ purity   {purity}</pre>
 
   <footer>
     <p>GHK Labs · Copper Tripeptide-1 for the look and feel of skin</p>
-    <p class="mono">Copper Tripeptide-1 · lot on the glass</p>
+    <p class="mono"><a href="/science">Science</a> · <a href="/quality">Quality</a> · <a href="/raw">Powder</a></p>
   </footer>
   <script src="trace.js"></script>
 </body>

@@ -2,7 +2,7 @@
 
 Status: accepted
 
-The live page at `/` leads with the serum story from [storefront-copy.md](storefront-copy.md), including a generic unbranded bottle ([label-truth-up.md](label-truth-up.md) §2.3). The sections below still describe the original webhook page. That walkthrough is not what `site/index.html` renders.
+The live pages lead with the serum story from [storefront-copy.md](storefront-copy.md): `/` (generic unbranded bottle, [label-truth-up.md](label-truth-up.md) §2.3), `/science`, `/quality`, and `/raw`. Unpublished facts are omitted, not printed as braces. Powder prices and checkout stay off until commercial sign-off. The sections below still describe the original webhook page. That walkthrough is not what these files render.
 
 ## Problem
 

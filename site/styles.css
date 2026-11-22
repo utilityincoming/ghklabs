@@ -215,6 +215,18 @@ button.done { background: var(--signal); border-color: var(--signal); color: var
 figure { margin: 0; }
 figcaption { font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.6rem; }
 
+.hero-copy { display: block; padding-top: 3rem; }
+.hero-copy p { max-width: 42rem; }
+.rooms, .read { max-width: 46rem; }
+.rooms { width: 100%; border-collapse: collapse; margin: 0 0 1.4rem; }
+.rooms th, .rooms td { text-align: left; vertical-align: top; padding: 0.7rem 0.8rem 0.7rem 0; border-top: 1px solid var(--line); }
+.rooms th { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+.read { padding-left: 1.2rem; color: var(--muted); }
+.read li { margin: 0.6rem 0; }
+.read strong { color: var(--ink); font-weight: 600; }
+.notice { border-left: 3px solid var(--signal); padding-left: 0.9rem; color: var(--ink); }
+footer a { color: inherit; }
+
 footer {
   display: flex;
   justify-content: space-between;

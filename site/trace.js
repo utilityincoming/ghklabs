@@ -1,8 +1,8 @@
 const steps = [
   { state: "molecule", tone: "", line: "Three amino acids plus copper.", fill: 25, note: "GHK-Cu. On the label the name is Copper Tripeptide-1." },
-  { state: "percent", tone: "", line: "The concentration is printed.", fill: 50, note: "{percent} on the label. The figure, in plain type." },
+  { state: "percent", tone: "", line: "The concentration is printed.", fill: 50, note: "The percent on the label. The figure, in plain type." },
   { state: "serum", tone: "ok", line: "A few drops, morning and evening.", fill: 75, note: "For the look of fine lines and the feel of moisturized skin." },
-  { state: "lot", tone: "ok", line: "The certificate matches the glass.", fill: 100, note: "Lot {lot}. Identity by {method}. Purity {purity}." }
+  { state: "lot", tone: "ok", line: "The certificate matches the glass.", fill: 100, note: "Lot, method, and purity, copied from the file." }
 ];
 
 const legend = document.getElementById("legend");
