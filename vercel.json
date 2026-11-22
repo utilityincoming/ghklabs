@@ -5,6 +5,9 @@
     { "source": "/trace.js", "destination": "/site/trace.js" },
     { "source": "/favicon.svg", "destination": "/site/favicon.svg" },
     { "source": "/media/(.*)", "destination": "/site/media/$1" },
+    { "source": "/science", "destination": "/site/science.html" },
+    { "source": "/quality", "destination": "/site/quality.html" },
+    { "source": "/raw", "destination": "/site/raw.html" },
     { "source": "/v1/(.*)", "destination": "/api" },
     { "source": "/healthz", "destination": "/api" }
   ],
