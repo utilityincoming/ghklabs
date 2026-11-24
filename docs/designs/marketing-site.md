@@ -6,7 +6,7 @@ The live pages lead with the serum story from [storefront-copy.md](storefront-co
 
 ## Mobile storefront
 
-Keep Serum, Science, Quality, and Powder visible in the narrow header. Use a non-sticky header on narrow screens to leave room for the page content. Put the homepage actions immediately after the product introduction and link to Quality from the lot verification section. Describe the current lot status beside the specimen while the manufacturer file is pending.
+Keep Serum, Science, Quality, and Powder visible in the narrow header. Use a non-sticky header on narrow screens to leave room for the page content. Put the homepage actions immediately after the product introduction and link to Quality from the lot verification section. Describe the current lot status beside the specimen while the manufacturer file is pending. Provide a keyboard skip link on every page. Serve a smaller hero source when viewport width and pixel density allow.
 
 ## Problem
 

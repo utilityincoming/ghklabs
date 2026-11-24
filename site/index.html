@@ -16,6 +16,7 @@
   <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
+  <a class="skip-link" href="#top">Skip to content</a>
   <div class="noise" aria-hidden="true"></div>
   <header class="top">
     <a class="mark" href="#top">GHK<span>Labs</span></a>
@@ -28,10 +29,12 @@
     <a class="pill" href="#serum">Shop the serum</a>
   </header>
 
-  <main id="top">
+  <main id="top" tabindex="-1">
     <section class="hero">
       <figure class="pack">
-        <img class="site-image" src="/media/01-product-hero.webp" alt="Clear dropper bottle filled with pale-blue Copper Tripeptide-1 serum" width="1536" height="1024" fetchpriority="high" />
+        <img class="site-image" src="/media/01-product-hero.webp"
+          srcset="/media/01-product-hero-768.webp 768w, /media/01-product-hero.webp 1536w"
+          sizes="(max-width: 512px) calc(100vw - 66px), (max-width: 800px) 446px, 410px" alt="Clear dropper bottle filled with pale-blue Copper Tripeptide-1 serum" width="1536" height="1024" fetchpriority="high" />
         <figcaption>Product rendering with a sample lot code.</figcaption>
       </figure>
       <div class="hero-copy">
