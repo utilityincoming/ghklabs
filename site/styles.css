@@ -107,12 +107,20 @@ h2 {
   padding: 2.5rem 0 2rem;
 }
 .pack { margin: 0; }
-.pack img {
+.site-image {
   display: block;
   width: 100%;
   height: auto;
   border-radius: 18px;
-  background: #fff;
+  background: var(--card);
+}
+.stage-copy .site-image { margin-top: 1rem; }
+.grid .site-image { margin-bottom: 0.9rem; }
+.science-intro {
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  align-items: center;
+  gap: 2rem;
 }
 .pack figcaption {
   margin: 0.55rem 0 0;
@@ -239,7 +247,7 @@ footer {
 
 @media (max-width: 800px) {
   .top nav { display: none; }
-  .hero, .facts, .stage, .split, .grid { grid-template-columns: 1fr; }
+  .hero, .facts, .stage, .split, .grid, .science-intro { grid-template-columns: 1fr; }
   .facts div { border-top: 1px solid var(--line); padding: 0.7rem 0; }
   .facts { border-top: 0; }
   h1 { font-size: 3rem; }
