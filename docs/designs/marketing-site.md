@@ -6,7 +6,7 @@ The live pages lead with the serum story from [storefront-copy.md](storefront-co
 
 ## Storefront layout
 
-Open with the serum introduction and product render, then give lot verification its own section. Keep ingredient research, label details, and use guidance in distinct sections. Use warm cream and pale blue to tie the page to the photography, with a shared header and footer across the storefront.
+Open with the serum introduction and product render, then give lot verification its own section. Keep ingredient research, label details, and use guidance in distinct sections. Use warm cream for the page, ivory for cards and navigation, and pale blue for lot verification and status. Use deep slate for body copy and a darker blue for links. Carry the same header and dark footer across the storefront.
 
 ## Mobile storefront
 
