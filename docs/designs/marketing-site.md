@@ -4,6 +4,10 @@ Status: accepted
 
 The live pages lead with the serum story from [storefront-copy.md](storefront-copy.md): `/` (generic unbranded bottle, [label-truth-up.md](label-truth-up.md) §2.3), `/science`, `/quality`, and `/raw`. Unpublished facts are omitted, not printed as braces. Powder prices and checkout stay off until commercial sign-off. The sections below still describe the original webhook page. That walkthrough is not what these files render.
 
+## Storefront layout
+
+Open with the serum introduction and product render, then give lot verification its own section. Keep ingredient research, label details, and use guidance in distinct sections. Use warm cream and pale blue to tie the page to the photography, with a shared header and footer across the storefront.
+
 ## Mobile storefront
 
 Keep Serum, Science, Quality, and Powder visible in the narrow header. Use a non-sticky header on narrow screens to leave room for the page content. Put the homepage actions immediately after the product introduction and link to Quality from the lot verification section. Describe the current lot status beside the specimen while the manufacturer file is pending. Provide a keyboard skip link on every page. Serve a smaller hero source when viewport width and pixel density allow.
