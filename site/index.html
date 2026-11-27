@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>GHK Labs — Copper Tripeptide-1 serum</title>
-  <meta name="description" content="A finished Copper Tripeptide-1 (GHK-Cu) serum for softer-looking skin — the percent printed on the label, the lot on the glass, and the manufacturer's certificate to download." />
+  <meta name="description" content="Explore GHK Labs Copper Tripeptide-1 serum for softer-looking skin and learn how released lots will be verified against the manufacturer’s certificate." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Schibsted+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -17,7 +17,6 @@
 </head>
 <body>
   <a class="skip-link" href="#top">Skip to content</a>
-  <div class="noise" aria-hidden="true"></div>
   <header class="top">
     <a class="mark" href="#top">GHK<span>Labs</span></a>
     <nav aria-label="Primary">
@@ -26,91 +25,40 @@
       <a href="/quality">Quality</a>
       <a href="/raw">Powder</a>
     </nav>
-    <a class="pill" href="#serum">Shop the serum</a>
+    <a class="pill" href="#serum">Explore the serum</a>
   </header>
 
-  <main id="top" tabindex="-1">
+  <main class="home" id="top" tabindex="-1">
     <section class="hero">
-      <figure class="pack">
+      <div class="hero-copy">
+        <p class="kicker">Copper Tripeptide-1</p>
+        <h1>Copper peptide serum</h1>
+        <p class="lede">A finished GHK-Cu serum for softer-looking skin and a moisturized feel.</p>
+        <div class="hero-actions">
+          <a class="pill solid" href="#serum">Explore the serum</a>
+          <a class="textlink" href="#verify">How lot verification works</a>
+        </div>
+        <p class="lot-status">No lot has been released yet.</p>
+      </div>
+      <figure class="pack hero-image">
         <img class="site-image" src="/media/01-product-hero.webp"
           srcset="/media/01-product-hero-768.webp 768w, /media/01-product-hero.webp 1536w"
-          sizes="(max-width: 512px) calc(100vw - 66px), (max-width: 800px) 446px, 410px" alt="Clear dropper bottle filled with pale-blue Copper Tripeptide-1 serum" width="1536" height="1024" fetchpriority="high" />
+          sizes="(max-width: 640px) calc(100vw - 40px), (max-width: 800px) 600px, (max-width: 1240px) 50vw, 620px" alt="Clear dropper bottle filled with pale-blue Copper Tripeptide-1 serum" width="1536" height="1024" fetchpriority="high" />
         <figcaption>Product rendering with a sample lot code.</figcaption>
       </figure>
-      <div class="hero-copy">
-      <p class="kicker">Copper Tripeptide-1 serum</p>
-      <h1>Softer-looking skin, with the peptide named and the lot on the glass.</h1>
-      <p class="lede">GHK-Cu in a finished serum. The percent is printed on the label. A few drops, morning and evening.</p>
-      <div class="hero-actions">
-        <a class="pill solid" href="#serum">Shop the serum</a>
-        <a class="textlink" href="#verify">How lot verification works</a>
-      </div>
-      <p class="signature"><span>Lot status:</span> no lot has been released yet.</p>
-      <p class="sig-note">It will be the manufacturer's file. The method and the purity will be the figures on that file.</p>
       <dl class="facts">
         <div><dt>Peptide</dt><dd>Copper Tripeptide-1</dd></div>
         <div><dt>On the label</dt><dd>The printed percent</dd></div>
         <div><dt>Feel</dt><dd>Moisturized skin</dd></div>
         <div><dt>Lot</dt><dd>When a lot is released</dd></div>
       </dl>
-      </div>
     </section>
 
-    <section class="stage" id="peptide">
-      <div class="stage-copy">
-        <p class="kicker">The ingredient</p>
-        <h2>Three amino acids and copper, in a finished serum.</h2>
-        <p>GHK-Cu is glycyl-L-histidyl-L-lysine bound to copper. On the label the name is Copper Tripeptide-1. This bottle is for the look of fine lines and the feel of moisturized skin. The research notes live on the science page.</p>
-        <ol class="legend" id="legend"></ol>
-        <img class="site-image" src="/media/06-serum-macro.webp" alt="Close-up of the pale-blue serum at the glass bottle shoulder" width="1536" height="1024" loading="lazy" />
-      </div>
-      <div class="trace" id="trace-card" aria-live="polite">
-        <div class="trace-top">
-          <span class="dot" id="trace-dot"></span>
-          <span id="trace-state">molecule</span>
-          <span class="mono" id="trace-id">GHK-Cu</span>
-        </div>
-        <p class="trace-line" id="trace-line">Three amino acids plus copper.</p>
-        <div class="rail" aria-hidden="true"><span id="rail-fill"></span></div>
-        <ul class="attempts" id="attempts"></ul>
-      </div>
-    </section>
-
-    <section id="serum">
-      <div class="section-head">
-        <p class="kicker">On the glass</p>
-        <h2>One number per line, each one printed on the label.</h2>
-      </div>
-      <div class="calls">
-        <article>
-          <header><span>01</span><h3>The peptide</h3></header>
-          <p>Copper Tripeptide-1 is the INCI name for GHK-Cu. It is the one hero ingredient on this page, named in plain words.</p>
-          <pre><code id="code-register">Copper Tripeptide-1 (GHK-Cu)
-water-based serum. Size is the figure on the label.</code></pre>
-          <button type="button" data-copy="code-register">Copy the INCI name</button>
-        </article>
-        <article>
-          <header><span>02</span><h3>The percent</h3></header>
-          <p>The stated concentration is on the label, in descending-order INCI. We print the figure; we do not round it up into an adjective.</p>
-          <pre><code id="code-publish">Copper Tripeptide-1, the percent on the label.
-pH, once the formula sheet says so.</code></pre>
-          <button type="button" data-copy="code-publish">Copy the spec line</button>
-        </article>
-        <article>
-          <header><span>03</span><h3>The lot</h3></header>
-          <p>Each unit carries its lot and release date. The number on this page matches the certificate for that lot, and no other.</p>
-          <pre><code id="code-lot">Lot, release date, method, and purity
-are copied from the manufacturer's certificate.</code></pre>
-          <button type="button" data-copy="code-lot">Copy the lot line</button>
-        </article>
-      </div>
-    </section>
-
-    <section id="verify" class="split">
+    <section id="verify" class="split verification">
       <div>
-        <p class="kicker">Verify</p>
+        <p class="kicker">Lot verification</p>
         <h2>The certificate matches the lot on the glass.</h2>
-        <p>The manufacturer's certificate names the method and the figure. No lot has been released yet. The manufacturer’s file will be available here when a lot is released.</p>
+        <p>The manufacturer's certificate names the method and the figure. No lot has been released yet. Manufacturer certificates will be available on the Quality page once a lot is released.</p>
         <p><a class="textlink" href="/quality">See lot status and certificate checks</a></p>
       </div>
       <figure class="pack">
@@ -119,7 +67,63 @@ are copied from the manufacturer's certificate.</code></pre>
       </figure>
     </section>
 
-    <section id="quality">
+    <section class="stage" id="peptide">
+      <div class="stage-copy">
+        <p class="kicker">The ingredient</p>
+        <h2>Three amino acids and copper, in a finished serum.</h2>
+        <p>GHK-Cu is glycyl-L-histidyl-L-lysine bound to copper. On the label the name is Copper Tripeptide-1.</p>
+        <p><a class="textlink" href="/science">Read the science notes</a></p>
+        <details class="ingredient-details">
+          <summary>Ingredient and label overview</summary>
+          <ol class="legend" id="legend"></ol>
+          <div class="trace" id="trace-card">
+            <div class="trace-top">
+              <span class="dot" id="trace-dot"></span>
+              <span id="trace-state">molecule</span>
+              <span class="mono" id="trace-id">GHK-Cu</span>
+            </div>
+            <p class="trace-line" id="trace-line">Three amino acids plus copper.</p>
+            <div class="rail" aria-hidden="true"><span id="rail-fill"></span></div>
+            <ul class="attempts" id="attempts"></ul>
+          </div>
+        </details>
+      </div>
+      <figure class="pack">
+        <img class="site-image" src="/media/06-serum-macro.webp" alt="Close-up of the pale-blue serum at the glass bottle shoulder" width="1536" height="1024" loading="lazy" />
+      </figure>
+    </section>
+
+    <section id="serum" class="content-section">
+      <div class="section-head">
+        <p class="kicker">On the glass</p>
+        <h2>One number per line, each one printed on the label.</h2>
+      </div>
+      <div class="calls">
+        <article>
+          <h3>The peptide</h3>
+          <p>Copper Tripeptide-1 is the INCI name for GHK-Cu. It is the one hero ingredient on this page, named in plain words.</p>
+          <pre><code id="code-register">Copper Tripeptide-1 (GHK-Cu)
+water-based serum. Size is the figure on the label.</code></pre>
+          <button type="button" data-copy="code-register">Copy the INCI name</button>
+        </article>
+        <article>
+          <h3>The percent</h3>
+          <p>The stated concentration is on the label, in descending-order INCI. We print the figure; we do not round it up into an adjective.</p>
+          <pre><code id="code-publish">Copper Tripeptide-1, the percent on the label.
+pH, once the formula sheet says so.</code></pre>
+          <button type="button" data-copy="code-publish">Copy the spec line</button>
+        </article>
+        <article>
+          <h3>The lot</h3>
+          <p>Each unit carries its lot and release date. The number on this page matches the certificate for that lot, and no other.</p>
+          <pre><code id="code-lot">Lot, release date, method, and purity
+are copied from the manufacturer's certificate.</code></pre>
+          <button type="button" data-copy="code-lot">Copy the lot line</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="quality" class="content-section">
       <div class="section-head">
         <p class="kicker">What we sell</p>
         <h2>The serum, the certificate, and how it ships.</h2>
@@ -148,8 +152,10 @@ are copied from the manufacturer's certificate.</code></pre>
   </main>
 
   <footer>
-    <p>GHK Labs · Copper Tripeptide-1 for the look and feel of skin</p>
-    <p class="mono"><a href="/science">Science</a> · <a href="/quality">Quality</a> · <a href="/raw">Powder</a></p>
+    <div class="footer-inner">
+      <p>GHK Labs · Copper Tripeptide-1 for the look and feel of skin</p>
+      <p class="mono"><a href="/science">Science</a> · <a href="/quality">Quality</a> · <a href="/raw">Powder</a></p>
+    </div>
   </footer>
   <script src="trace.js"></script>
 </body>
